@@ -954,6 +954,21 @@ Banner Style
   color: #fff !important;
 }
 
+/* Keep subpage content above decorative overlays */
+.subpage-banner {
+  padding-top: 170px;
+  padding-bottom: 50px;
+}
+
+.subpage-banner:after {
+  display: none;
+}
+
+.subpage-banner .container {
+  position: relative;
+  z-index: 2;
+}
+
 /* 
 ---------------------------------------------
 Services Style

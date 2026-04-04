@@ -36,11 +36,11 @@
           <div class="footer-widget">
             <h4>O nás</h4>
             <ul>
-              <li><a href="#top">Domov</a></li>
-              <li><a href="#opravy-servis">Služby</a></li>
-              <li><a href="#nahradne-diely">O nás</a></li>
-              <li><a href="#prislusenstvo">Referencie</a></li>
-              <li><a href="#naradie">Cenník</a></li>
+              <li><a href="index.php">Domov</a></li>
+              <li><a href="opravy-servis.php">Opravy a servis</a></li>
+              <li><a href="nahradne-diely.php">Náhradné diely</a></li>
+              <li><a href="prislusenstvo.php">Príslušenstvo</a></li>
+              <li><a href="naradie.php">Náradie</a></li>
             </ul>
           </div>
         </div>
@@ -48,11 +48,11 @@
           <div class="footer-widget">
             <h4>Užitočné odkazy</h4>
             <ul>
-              <li><a href="#opravy-servis">Výmena displeja</a></li>
-              <li><a href="#opravy-servis">Výmena batérie</a></li>
-              <li><a href="#opravy-servis">Diagnostika porúch</a></li>
-              <li><a href="#naradie">Orientačný cenník</a></li>
-              <li><a href="#newsletter">Kontakt a objednávka</a></li>
+              <li><a href="opravy-servis.php">Výmena displeja</a></li>
+              <li><a href="opravy-servis.php">Výmena batérie</a></li>
+              <li><a href="opravy-servis.php">Diagnostika porúch</a></li>
+              <li><a href="naradie.php">Orientačný cenník</a></li>
+              <li><a href="objednat-servis.php">Kontakt a objednávka</a></li>
             </ul>
           </div>
         </div>

@@ -1,3 +1,4 @@
+<?php $currentPage = basename($_SERVER['PHP_SELF']); ?>
 <!DOCTYPE html>
 <html lang="sk">
 
@@ -53,12 +54,12 @@
             <!-- ***** Koniec loga ***** -->
             <!-- ***** Začiatok menu ***** -->
             <ul class="nav">
-              <li class="scroll-to-section"><a href="#top" class="active">Domov</a></li>
-              <li class="scroll-to-section"><a href="#opravy-servis">Opravy a servis</a></li>
-              <li class="scroll-to-section"><a href="#nahradne-diely">Náhradné diely</a></li>
-              <li class="scroll-to-section"><a href="#naradie">Náradie</a></li>
-              <li class="scroll-to-section"><a href="#prislusenstvo">Príslušenstvo</a></li>
-              <li><div class="gradient-button"><a class="scroll-to-section" href="#newsletter"><i class="fa fa-tools"></i> Objednať servis</a></div></li>
+              <li><a href="index.php" class="<?php echo $currentPage === 'index.php' ? 'active' : ''; ?>">Domov</a></li>
+              <li><a href="opravy-servis.php" class="<?php echo $currentPage === 'opravy-servis.php' ? 'active' : ''; ?>">Opravy a servis</a></li>
+              <li><a href="nahradne-diely.php" class="<?php echo $currentPage === 'nahradne-diely.php' ? 'active' : ''; ?>">Náhradné diely</a></li>
+              <li><a href="naradie.php" class="<?php echo $currentPage === 'naradie.php' ? 'active' : ''; ?>">Náradie</a></li>
+              <li><a href="prislusenstvo.php" class="<?php echo $currentPage === 'prislusenstvo.php' ? 'active' : ''; ?>">Príslušenstvo</a></li>
+              <li><div class="gradient-button"><a href="objednat-servis.php" class="<?php echo $currentPage === 'objednat-servis.php' ? 'active' : ''; ?>"><i class="fa fa-tools"></i> Objednať servis</a></div></li>
             </ul>        
             <a class='menu-trigger'>
                 <span>Menu</span>
