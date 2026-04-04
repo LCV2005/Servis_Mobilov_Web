@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 
   <head>
 
@@ -12,9 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
-    <title>Chain App Dev - App Landing Page HTML5 Template</title>
+    <title>Chain App Dev - HTML5 šablóna vstupnej stránky aplikácie</title>
 
-    <!-- Bootstrap core CSS -->
+    <!-- Základné CSS Bootstrapu -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 <!--
@@ -25,7 +25,7 @@ https://templatemo.com/tm-570-chain-app-dev
 
 -->
 
-    <!-- Additional CSS Files -->
+    <!-- Dodatočné CSS súbory -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/templatemo-chain-app-dev.css">
     <link rel="stylesheet" href="assets/css/animated.css">
@@ -35,7 +35,7 @@ https://templatemo.com/tm-570-chain-app-dev
 
 <body>
 
-  <!-- ***** Preloader Start ***** -->
+  <!-- ***** Začiatok prednačítania ***** -->
   <div id="js-preloader" class="js-preloader">
     <div class="preloader-inner">
       <span class="dot"></span>
@@ -46,119 +46,119 @@ https://templatemo.com/tm-570-chain-app-dev
       </div>
     </div>
   </div>
-  <!-- ***** Preloader End ***** -->
+  <!-- ***** Koniec prednačítania ***** -->
 
-  <!-- ***** Header Area Start ***** -->
+  <!-- ***** Začiatok oblasti hlavičky ***** -->
   <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
     <div class="container">
       <div class="row">
         <div class="col-12">
           <nav class="main-nav">
-            <!-- ***** Logo Start ***** -->
+            <!-- ***** Začiatok loga ***** -->
             <a href="index.html" class="logo">
               <img src="assets/images/logo.png" alt="Chain App Dev">
             </a>
-            <!-- ***** Logo End ***** -->
-            <!-- ***** Menu Start ***** -->
+            <!-- ***** Koniec loga ***** -->
+            <!-- ***** Začiatok menu ***** -->
             <ul class="nav">
-              <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-              <li class="scroll-to-section"><a href="#services">Services</a></li>
-              <li class="scroll-to-section"><a href="#about">About</a></li>
-              <li class="scroll-to-section"><a href="#pricing">Pricing</a></li>
-              <li class="scroll-to-section"><a href="#newsletter">Newsletter</a></li>
-              <li><div class="gradient-button"><a id="modal_trigger" href="#modal"><i class="fa fa-sign-in-alt"></i> Sign In Now</a></div></li> 
+              <li class="scroll-to-section"><a href="#top" class="active">Domov</a></li>
+              <li class="scroll-to-section"><a href="#services">Služby</a></li>
+              <li class="scroll-to-section"><a href="#about">O nás</a></li>
+              <li class="scroll-to-section"><a href="#pricing">Cenník</a></li>
+              <li class="scroll-to-section"><a href="#newsletter">Novinky</a></li>
+              <li><div class="gradient-button"><a id="modal_trigger" href="#modal"><i class="fa fa-sign-in-alt"></i> Prihlásiť sa</a></div></li> 
             </ul>        
             <a class='menu-trigger'>
                 <span>Menu</span>
             </a>
-            <!-- ***** Menu End ***** -->
+            <!-- ***** Koniec menu ***** -->
           </nav>
         </div>
       </div>
     </div>
   </header>
-  <!-- ***** Header Area End ***** -->
+  <!-- ***** Koniec oblasti hlavičky ***** -->
   
   <div id="modal" class="popupContainer" style="display:none;">
     <div class="popupHeader">
-        <span class="header_title">Login</span>
+                <span class="header_title">Prihlásenie</span>
         <span class="modal_close"><i class="fa fa-times"></i></span>
     </div>
 
     <section class="popupBody">
-        <!-- Social Login -->
+        <!-- Prihlásenie cez sociálne siete -->
         <div class="social_login">
             <div class="">
                 <a href="#" class="social_box fb">
                     <span class="icon"><i class="fab fa-facebook"></i></span>
-                    <span class="icon_title">Connect with Facebook</span>
+                    <span class="icon_title">Prepojiť s Facebookom</span>
 
                 </a>
 
                 <a href="#" class="social_box google">
                     <span class="icon"><i class="fab fa-google-plus"></i></span>
-                    <span class="icon_title">Connect with Google</span>
+                    <span class="icon_title">Prepojiť s Googlom</span>
                 </a>
             </div>
 
             <div class="centeredText">
-                <span>Or use your Email address</span>
+                <span>Alebo použite svoju e-mailovú adresu</span>
             </div>
 
             <div class="action_btns">
-                <div class="one_half"><a href="#" id="login_form" class="btn">Login</a></div>
-                <div class="one_half last"><a href="#" id="register_form" class="btn">Sign up</a></div>
+                <div class="one_half"><a href="#" id="login_form" class="btn">Prihlásiť sa</a></div>
+                <div class="one_half last"><a href="#" id="register_form" class="btn">Registrovať sa</a></div>
             </div>
         </div>
 
-        <!-- Username & Password Login form -->
+        <!-- Prihlasovací formulár s používateľským menom a heslom -->
         <div class="user_login">
             <form>
-                <label>Email / Username</label>
+                <label>E-mail / používateľské meno</label>
                 <input type="text" />
                 <br />
 
-                <label>Password</label>
+                <label>Heslo</label>
                 <input type="password" />
                 <br />
 
                 <div class="checkbox">
                     <input id="remember" type="checkbox" />
-                    <label for="remember">Remember me on this computer</label>
+                    <label for="remember">Zapamätať si ma na tomto počítači</label>
                 </div>
 
                 <div class="action_btns">
-                    <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
-                    <div class="one_half last"><a href="#" class="btn btn_red">Login</a></div>
+                    <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Späť</a></div>
+                    <div class="one_half last"><a href="#" class="btn btn_red">Prihlásiť sa</a></div>
                 </div>
             </form>
 
-            <a href="#" class="forgot_password">Forgot password?</a>
+            <a href="#" class="forgot_password">Zabudli ste heslo?</a>
         </div>
 
-        <!-- Register Form -->
+        <!-- Registračný formulár -->
         <div class="user_register">
             <form>
-                <label>Full Name</label>
+                <label>Celé meno</label>
                 <input type="text" />
                 <br />
 
-                <label>Email Address</label>
+                <label>E-mailová adresa</label>
                 <input type="email" />
                 <br />
 
-                <label>Password</label>
+                <label>Heslo</label>
                 <input type="password" />
                 <br />
 
                 <div class="checkbox">
                     <input id="send_updates" type="checkbox" />
-                    <label for="send_updates">Send me occasional email updates</label>
+                    <label for="send_updates">Posielajte mi občasné e-mailové aktualizácie</label>
                 </div>
 
                 <div class="action_btns">
-                    <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
-                    <div class="one_half last"><a href="#" class="btn btn_red">Register</a></div>
+                    <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Späť</a></div>
+                    <div class="one_half last"><a href="#" class="btn btn_red">Registrovať sa</a></div>
                 </div>
             </form>
         </div>
@@ -174,15 +174,15 @@ https://templatemo.com/tm-570-chain-app-dev
               <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
                 <div class="row">
                   <div class="col-lg-12">
-                    <h2>Get The Latest App From App Stores</h2>
-                    <p>Chain App Dev is an app landing page HTML5 template based on Bootstrap v5.1.3 CSS layout provided by TemplateMo, a great website to download free CSS templates.</p>
+                    <h2>Získajte najnovšiu aplikáciu z obchodov s aplikáciami</h2>
+                      <p>Chain App Dev je HTML5 šablóna vstupnej stránky aplikácie založená na rozložení Bootstrap v5.1.3, ktoré poskytuje TemplateMo, skvelá webová stránka na sťahovanie bezplatných CSS šablón.</p>
                   </div>
                   <div class="col-lg-12">
                     <div class="white-button first-button scroll-to-section">
-                      <a href="#contact">Free Quote <i class="fab fa-apple"></i></a>
+                      <a href="#contact">Bezplatná ponuka <i class="fab fa-apple"></i></a>
                     </div>
                     <div class="white-button scroll-to-section">
-                      <a href="#contact">Free Quote <i class="fab fa-google-play"></i></a>
+                      <a href="#contact">Bezplatná ponuka <i class="fab fa-google-play"></i></a>
                     </div>
                   </div>
                 </div>
@@ -204,9 +204,9 @@ https://templatemo.com/tm-570-chain-app-dev
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
           <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
-            <h4>Amazing <em>Services &amp; Features</em> for you</h4>
+            <h4>Úžasné <em>služby a funkcie</em> pre vás</h4>
             <img src="assets/images/heading-line-dec.png" alt="">
-            <p>If you need the greatest collection of HTML templates for your business, please visit <a rel="nofollow" href="https://www.toocss.com/" target="_blank">TooCSS</a> Blog. If you need to have a contact form PHP script, go to <a href="https://templatemo.com/contact" target="_parent">our contact page</a> for more information.</p>
+            <p>Ak potrebujete najväčšiu zbierku HTML šablón pre svoje podnikanie, navštívte blog <a rel="nofollow" href="https://www.toocss.com/" target="_blank">TooCSS</a>. Ak potrebujete PHP skript pre kontaktný formulár, pre viac informácií prejdite na <a href="https://templatemo.com/contact" target="_parent">našu kontaktnú stránku</a>.</p>
           </div>
         </div>
       </div>
@@ -216,40 +216,40 @@ https://templatemo.com/tm-570-chain-app-dev
         <div class="col-lg-3">
           <div class="service-item first-service">
             <div class="icon"></div>
-            <h4>App Maintenance</h4>
-            <p>You are not allowed to redistribute this template ZIP file on any other website.</p>
+            <h4>Údržba aplikácie</h4>
+            <p>Nie je dovolené znovu šíriť tento ZIP súbor šablóny na žiadnej inej webovej stránke.</p>
             <div class="text-button">
-              <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
+              <a href="#">Prečítať viac <i class="fa fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="service-item second-service">
             <div class="icon"></div>
-            <h4>Rocket Speed of App</h4>
-            <p>You are allowed to use the Chain App Dev HTML template. Feel free to modify or edit this layout.</p>
+            <h4>Raketová rýchlosť aplikácie</h4>
+            <p>HTML šablónu Chain App Dev môžete používať. Tento layout môžete voľne upravovať alebo meniť.</p>
             <div class="text-button">
-              <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
+              <a href="#">Prečítať viac <i class="fa fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="service-item third-service">
             <div class="icon"></div>
-            <h4>Multi Workflow Idea</h4>
-            <p>If this template is beneficial for your work, please support us <a rel="nofollow" href="https://paypal.me/templatemo" target="_blank">a little via PayPal</a>. Thank you.</p>
+            <h4>Myšlienka viacerých pracovných postupov</h4>
+            <p>Ak je pre vás táto šablóna užitočná, podporte nás prosím <a rel="nofollow" href="https://paypal.me/templatemo" target="_blank">malým príspevkom cez PayPal</a>. Ďakujeme.</p>
             <div class="text-button">
-              <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
+              <a href="#">Prečítať viac <i class="fa fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="service-item fourth-service">
             <div class="icon"></div>
-            <h4>24/7 Help &amp; Support</h4>
-            <p>Lorem ipsum dolor consectetur adipiscing elit sedder williamsburg photo booth quinoa and fashion axe.</p>
+            <h4>Pomoc a podpora 24/7</h4>
+            <p>Ukážkový text o službách, ktoré poskytujeme, a o prínose pre váš projekt.</p>
             <div class="text-button">
-              <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
+              <a href="#">Prečítať viac <i class="fa fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -262,41 +262,41 @@ https://templatemo.com/tm-570-chain-app-dev
       <div class="row">
         <div class="col-lg-6 align-self-center">
           <div class="section-heading">
-            <h4>About <em>What We Do</em> &amp; Who We Are</h4>
+            <h4>O <em>tom, čo robíme</em> a kto sme</h4>
             <img src="assets/images/heading-line-dec.png" alt="">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod tempor incididunt ut labore et dolore magna.</p>
+            <p>Stručný popis našej práce, tímu a hodnôt, ktoré prinášame zákazníkom.</p>
           </div>
           <div class="row">
             <div class="col-lg-6">
               <div class="box-item">
-                <h4><a href="#">Maintance Problems</a></h4>
-                <p>Lorem Ipsum Text</p>
+                <h4><a href="#">Problémy s údržbou</a></h4>
+                <p>Ukážkový text</p>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="box-item">
-                <h4><a href="#">24/7 Support &amp; Help</a></h4>
-                <p>Lorem Ipsum Text</p>
+                <h4><a href="#">Podpora a pomoc 24/7</a></h4>
+                <p>Ukážkový text</p>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="box-item">
-                <h4><a href="#">Fixing Issues About</a></h4>
-                <p>Lorem Ipsum Text</p>
+                <h4><a href="#">Riešenie problémov</a></h4>
+                <p>Ukážkový text</p>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="box-item">
-                <h4><a href="#">Co. Development</a></h4>
-                <p>Lorem Ipsum Text</p>
+                <h4><a href="#">Firemný vývoj</a></h4>
+                <p>Ukážkový text</p>
               </div>
             </div>
             <div class="col-lg-12">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod tempor idunte ut labore et dolore adipiscing  magna.</p>
+              <p>Pomáhame vytvárať spoľahlivé riešenia, ktoré šetria čas a zjednodušujú prácu.</p>
               <div class="gradient-button">
-                <a href="#">Start 14-Day Free Trial</a>
+                <a href="#">Spustiť 14-dňovú bezplatnú skúšobnú verziu</a>
               </div>
-              <span>*No Credit Card Required</span>
+              <span>*Bez nutnosti zadania kreditnej karty</span>
             </div>
           </div>
         </div>
@@ -314,9 +314,9 @@ https://templatemo.com/tm-570-chain-app-dev
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
           <div class="section-heading">
-            <h4>Check What <em>The Clients Say</em> About Our App Dev</h4>
+            <h4>Zistite, čo <em>hovoria klienti</em> o našom vývoji aplikácií</h4>
             <img src="assets/images/heading-line-dec.png" alt="">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod tempor incididunt ut labore et dolore magna.</p>
+            <p>Spätná väzba od klientov, ktorí využívajú naše služby a riešenia.</p>
           </div>
         </div>
         <div class="col-lg-12">
@@ -330,10 +330,10 @@ https://templatemo.com/tm-570-chain-app-dev
                         <div class="row">
                           <div class="col-lg-4 col-sm-4 col-12">
                             <h4>David Martino Co</h4>
-                            <span class="date">30 November 2021</span>
+                            <span class="date">30. november 2021</span>
                           </div>
                           <div class="col-lg-4 col-sm-4 d-none d-sm-block">
-                            <span class="category">Financial Apps</span>
+                            <span class="category">Finančné aplikácie</span>
                           </div>
                           <div class="col-lg-4 col-sm-4 col-12">
                               <i class="fa fa-star"></i>
@@ -351,10 +351,10 @@ https://templatemo.com/tm-570-chain-app-dev
                         <div class="row">
                           <div class="col-lg-4 col-sm-4 col-12">
                             <h4>Jake Harris Nyo</h4>
-                            <span class="date">29 November 2021</span>
+                            <span class="date">29. november 2021</span>
                           </div>
                           <div class="col-lg-4 col-sm-4 d-none d-sm-block">
-                            <span class="category">Digital Business</span>
+                            <span class="category">Digitálne podnikanie</span>
                           </div>
                           <div class="col-lg-4 col-sm-4 col-12">
                               <i class="fa fa-star"></i>
@@ -372,10 +372,10 @@ https://templatemo.com/tm-570-chain-app-dev
                         <div class="row">
                           <div class="col-lg-4 col-sm-4 col-12">
                             <h4>May Catherina</h4>
-                            <span class="date">27 November 2021</span>
+                            <span class="date">27. november 2021</span>
                           </div>
                           <div class="col-lg-4 col-sm-4 d-none d-sm-block">
-                            <span class="category">Business &amp; Economics</span>
+                            <span class="category">Biznis a ekonómia</span>
                           </div>
                           <div class="col-lg-4 col-sm-4 col-12">
                               <i class="fa fa-star"></i>
@@ -393,10 +393,10 @@ https://templatemo.com/tm-570-chain-app-dev
                         <div class="row">
                           <div class="col-lg-4 col-sm-4 col-12">
                             <h4>Random User</h4>
-                            <span class="date">24 November 2021</span>
+                            <span class="date">24. november 2021</span>
                           </div>
                           <div class="col-lg-4 col-sm-4 d-none d-sm-block">
-                            <span class="category">New App Ecosystem</span>
+                            <span class="category">Nový ekosystém aplikácií</span>
                           </div>
                           <div class="col-lg-4 col-sm-4 col-12">
                               <i class="fa fa-star"></i>
@@ -441,14 +441,13 @@ https://templatemo.com/tm-570-chain-app-dev
                             <div class="col-lg-12">
                               <div class="client-content">
                                 <img src="assets/images/quote.png" alt="">
-                                <p>“Lorem ipsum dolor sit amet, consectetur adpiscing elit, sed do eismod tempor idunte ut labore et dolore magna aliqua darwin kengan
-                                  lorem ipsum dolor sit amet, consectetur picing elit massive big blasta.”</p>
+                                <p>„Ukážkový text o spokojnosti klienta, spolupráci a výsledkoch projektu, doplnený o krátky opis skúsenosti s našou službou.“</p>
                               </div>
                               <div class="down-content">
                                 <img src="assets/images/client-image.jpg" alt="">
                                 <div class="right-content">
                                   <h4>David Martino</h4>
-                                  <span>CEO of David Company</span>
+                                  <span>Generálny riaditeľ spoločnosti David Company</span>
                                 </div>
                               </div>
                             </div>
@@ -463,14 +462,13 @@ https://templatemo.com/tm-570-chain-app-dev
                             <div class="col-lg-12">
                               <div class="client-content">
                                 <img src="assets/images/quote.png" alt="">
-                                <p>“CTO, Lorem ipsum dolor sit amet, consectetur adpiscing elit, sed do eismod tempor idunte ut labore et dolore magna aliqua darwin kengan
-                                  lorem ipsum dolor sit amet, consectetur picing elit massive big blasta.”</p>
+                                <p>„Vyjadrenie technického riaditeľa o stabilite riešenia, rýchlosti dodania a kvalite podpory.“</p>
                               </div>
                               <div class="down-content">
                                 <img src="assets/images/client-image.jpg" alt="">
                                 <div class="right-content">
                                   <h4>Jake H. Nyo</h4>
-                                  <span>CTO of Digital Company</span>
+                                  <span>Technický riaditeľ Digital Company</span>
                                 </div>
                               </div>
                             </div>
@@ -485,14 +483,13 @@ https://templatemo.com/tm-570-chain-app-dev
                             <div class="col-lg-12">
                               <div class="client-content">
                                 <img src="assets/images/quote.png" alt="">
-                                <p>“May, Lorem ipsum dolor sit amet, consectetur adpiscing elit, sed do eismod tempor idunte ut labore et dolore magna aliqua darwin kengan
-                                  lorem ipsum dolor sit amet, consectetur picing elit massive big blasta.”</p>
+                                <p>„Spätná väzba od zakladateľky o tom, ako riešenie pomohlo zrýchliť prácu tímu.“</p>
                               </div>
                               <div class="down-content">
                                 <img src="assets/images/client-image.jpg" alt="">
                                 <div class="right-content">
                                   <h4>May C.</h4>
-                                  <span>Founder of Catherina Co.</span>
+                                  <span>Zakladateľka spoločnosti Catherina Co.</span>
                                 </div>
                               </div>
                             </div>
@@ -507,14 +504,13 @@ https://templatemo.com/tm-570-chain-app-dev
                             <div class="col-lg-12">
                               <div class="client-content">
                                 <img src="assets/images/quote.png" alt="">
-                                <p>“Lorem ipsum dolor sit amet, consectetur adpiscing elit, sed do eismod tempor idunte ut labore et dolore magna aliqua darwin kengan
-                                  lorem ipsum dolor sit amet, consectetur picing elit massive big blasta.”</p>
+                                <p>„Krátke hodnotenie o spoľahlivosti, komunikácii a podpore počas spolupráce.“</p>
                               </div>
                               <div class="down-content">
                                 <img src="assets/images/client-image.jpg" alt="">
                                 <div class="right-content">
                                   <h4>Random Staff</h4>
-                                  <span>Manager, Digital Company</span>
+                                  <span>Manažér, Digital Company</span>
                                 </div>
                               </div>
                             </div>
@@ -529,14 +525,13 @@ https://templatemo.com/tm-570-chain-app-dev
                             <div class="col-lg-12">
                               <div class="client-content">
                                 <img src="assets/images/quote.png" alt="">
-                                <p>“Mark, Lorem ipsum dolor sit amet, consectetur adpiscing elit, sed do eismod tempor idunte ut labore et dolore magna aliqua darwin kengan
-                                  lorem ipsum dolor sit amet, consectetur picing elit massive big blasta.”</p>
+                                <p>„Spätná väzba o flexibilite tímu a rýchlej realizácii požiadaviek.“</p>
                               </div>
                               <div class="down-content">
                                 <img src="assets/images/client-image.jpg" alt="">
                                 <div class="right-content">
                                   <h4>Mark Am</h4>
-                                  <span>CTO, Amber Do Company</span>
+                                  <span>Technický riaditeľ, Amber Do Company</span>
                                 </div>
                               </div>
                             </div>
@@ -559,68 +554,68 @@ https://templatemo.com/tm-570-chain-app-dev
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
           <div class="section-heading">
-            <h4>We Have The Best Pre-Order <em>Prices</em> You Can Get</h4>
+            <h4>Máme tie najlepšie <em>predobjednávkové ceny</em>, aké môžete získať</h4>
             <img src="assets/images/heading-line-dec.png" alt="">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod tempor incididunt ut labore et dolore magna.</p>
+            <p>Vyberte si balík, ktorý najlepšie vyhovuje vašim potrebám a rozpočtu.</p>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="pricing-item-regular">
             <span class="price">$12</span>
-            <h4>Standard Plan App</h4>
+            <h4>Štandardný plán aplikácie</h4>
             <div class="icon">
               <img src="assets/images/pricing-table-01.png" alt="">
             </div>
             <ul>
-              <li>Lorem Ipsum Dolores</li>
-              <li>20 TB of Storage</li>
-              <li class="non-function">Life-time Support</li>
-              <li class="non-function">Premium Add-Ons</li>
-              <li class="non-function">Fastest Network</li>
-              <li class="non-function">More Options</li>
+              <li>Ukážkový prvok balíka</li>
+              <li>20 TB úložiska</li>
+              <li class="non-function">Celoživotná podpora</li>
+              <li class="non-function">Prémiové doplnky</li>
+              <li class="non-function">Najrýchlejšia sieť</li>
+              <li class="non-function">Viac možností</li>
             </ul>
             <div class="border-button">
-              <a href="#">Purchase This Plan Now</a>
+              <a href="#">Kúpiť tento plán teraz</a>
             </div>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="pricing-item-pro">
             <span class="price">$25</span>
-            <h4>Business Plan App</h4>
+            <h4>Biznis plán aplikácie</h4>
             <div class="icon">
               <img src="assets/images/pricing-table-01.png" alt="">
             </div>
             <ul>
-              <li>Lorem Ipsum Dolores</li>
-              <li>50 TB of Storage</li>
-              <li>Life-time Support</li>
-              <li>Premium Add-Ons</li>
-              <li class="non-function">Fastest Network</li>
-              <li class="non-function">More Options</li>
+              <li>Ukážkový prvok balíka</li>
+              <li>50 TB úložiska</li>
+              <li>Celoživotná podpora</li>
+              <li>Prémiové doplnky</li>
+              <li class="non-function">Najrýchlejšia sieť</li>
+              <li class="non-function">Viac možností</li>
             </ul>
             <div class="border-button">
-              <a href="#">Purchase This Plan Now</a>
+              <a href="#">Kúpiť tento plán teraz</a>
             </div>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="pricing-item-regular">
             <span class="price">$66</span>
-            <h4>Premium Plan App</h4>
+            <h4>Prémiový plán aplikácie</h4>
             <div class="icon">
               <img src="assets/images/pricing-table-01.png" alt="">
             </div>
             <ul>
-              <li>Lorem Ipsum Dolores</li>
-              <li>120 TB of Storage</li>
-              <li>Life-time Support</li>
-              <li>Premium Add-Ons</li>
-              <li>Fastest Network</li>
-              <li>More Options</li>
+              <li>Ukážkový prvok balíka</li>
+              <li>120 TB úložiska</li>
+              <li>Celoživotná podpora</li>
+              <li>Prémiové doplnky</li>
+              <li>Najrýchlejšia sieť</li>
+              <li>Viac možností</li>
             </ul>
             <div class="border-button">
-              <a href="#">Purchase This Plan Now</a>
+              <a href="#">Kúpiť tento plán teraz</a>
             </div>
           </div>
         </div>
@@ -633,7 +628,7 @@ https://templatemo.com/tm-570-chain-app-dev
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
           <div class="section-heading">
-            <h4>Join our mailing list to receive the news &amp; latest trends</h4>
+            <h4>Pridajte sa do nášho mailing listu a získavajte novinky a najnovšie trendy</h4>
           </div>
         </div>
         <div class="col-lg-6 offset-lg-3">
@@ -641,12 +636,12 @@ https://templatemo.com/tm-570-chain-app-dev
             <div class="row">
               <div class="col-lg-6 col-sm-6">
                 <fieldset>
-                  <input type="address" name="address" class="email" placeholder="Email Address..." autocomplete="on" required>
+                  <input type="address" name="address" class="email" placeholder="E-mailová adresa..." autocomplete="on" required>
                 </fieldset>
               </div>
               <div class="col-lg-6 col-sm-6">
                 <fieldset>
-                  <button type="submit" class="main-button">Subscribe Now <i class="fa fa-angle-right"></i></button>
+                  <button type="submit" class="main-button">Prihlásiť sa na odber <i class="fa fa-angle-right"></i></button>
                 </fieldset>
               </div>
             </div>
@@ -656,7 +651,7 @@ https://templatemo.com/tm-570-chain-app-dev
       <div class="row">
         <div class="col-lg-3">
           <div class="footer-widget">
-            <h4>Contact Us</h4>
+            <h4>Kontaktujte nás</h4>
             <p>Rio de Janeiro - RJ, 22795-008, Brazil</p>
             <p><a href="#">010-020-0340</a></p>
             <p><a href="#">info@company.co</a></p>
@@ -664,51 +659,51 @@ https://templatemo.com/tm-570-chain-app-dev
         </div>
         <div class="col-lg-3">
           <div class="footer-widget">
-            <h4>About Us</h4>
+            <h4>O nás</h4>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Testimonials</a></li>
-              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Domov</a></li>
+              <li><a href="#">Služby</a></li>
+              <li><a href="#">O nás</a></li>
+              <li><a href="#">Referencie</a></li>
+              <li><a href="#">Cenník</a></li>
             </ul>
             <ul>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Testimonials</a></li>
-              <li><a href="#">Pricing</a></li>
+              <li><a href="#">O nás</a></li>
+              <li><a href="#">Referencie</a></li>
+              <li><a href="#">Cenník</a></li>
             </ul>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="footer-widget">
-            <h4>Useful Links</h4>
+            <h4>Užitočné odkazy</h4>
             <ul>
-              <li><a href="#">Free Apps</a></li>
+              <li><a href="#">Bezplatné aplikácie</a></li>
               <li><a href="#">App Engine</a></li>
-              <li><a href="#">Programming</a></li>
-              <li><a href="#">Development</a></li>
-              <li><a href="#">App News</a></li>
+              <li><a href="#">Programovanie</a></li>
+              <li><a href="#">Vývoj</a></li>
+              <li><a href="#">Novinky o aplikáciách</a></li>
             </ul>
             <ul>
-              <li><a href="#">App Dev Team</a></li>
-              <li><a href="#">Digital Web</a></li>
-              <li><a href="#">Normal Apps</a></li>
+              <li><a href="#">Tím App Dev</a></li>
+              <li><a href="#">Digitálny web</a></li>
+              <li><a href="#">Bežné aplikácie</a></li>
             </ul>
           </div>
         </div>
         <div class="col-lg-3">
           <div class="footer-widget">
-            <h4>About Our Company</h4>
+            <h4>O našej spoločnosti</h4>
             <div class="logo">
               <img src="assets/images/white-logo.png" alt="">
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+            <p>Poskytujeme moderné digitálne riešenia so zameraním na kvalitu, rýchlosť a spoľahlivosť.</p>
           </div>
         </div>
         <div class="col-lg-12">
           <div class="copyright-text">
-            <p>Copyright © 2022 Chain App Dev Company. All Rights Reserved. 
-          <br>Design: <a href="https://templatemo.com/" target="_blank" title="css templates">TemplateMo</a></p>
+            <p>Autorské práva © 2022 Chain App Dev Company. Všetky práva vyhradené. 
+          <br>Dizajn: <a href="https://templatemo.com/" target="_blank" title="css templates">TemplateMo</a></p>
           </div>
         </div>
       </div>
@@ -716,7 +711,7 @@ https://templatemo.com/tm-570-chain-app-dev
   </footer>
 
 
-  <!-- Scripts -->
+  <!-- Skripty -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/owl-carousel.js"></script>
