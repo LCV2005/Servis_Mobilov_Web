@@ -3,7 +3,7 @@
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
           <div class="section-heading">
-            <h4>Získajte tipy na starostlivosť o telefón a aktuálne akcie na servis</h4>
+            <h4>Získajte tipy na starostlivosť o telefón, tablet aj smart hodinky a aktuálne servisné akcie</h4>
           </div>
         </div>
         <div class="col-lg-6 offset-lg-3">
@@ -37,10 +37,10 @@
             <h4>O nás</h4>
             <ul>
               <li><a href="#top">Domov</a></li>
-              <li><a href="#services">Služby</a></li>
-              <li><a href="#about">O nás</a></li>
-              <li><a href="#clients">Referencie</a></li>
-              <li><a href="#pricing">Cenník</a></li>
+              <li><a href="#opravy-servis">Služby</a></li>
+              <li><a href="#nahradne-diely">O nás</a></li>
+              <li><a href="#prislusenstvo">Referencie</a></li>
+              <li><a href="#naradie">Cenník</a></li>
             </ul>
           </div>
         </div>
@@ -48,10 +48,10 @@
           <div class="footer-widget">
             <h4>Užitočné odkazy</h4>
             <ul>
-              <li><a href="#services">Výmena displeja</a></li>
-              <li><a href="#services">Výmena batérie</a></li>
-              <li><a href="#services">Diagnostika porúch</a></li>
-              <li><a href="#pricing">Orientačný cenník</a></li>
+              <li><a href="#opravy-servis">Výmena displeja</a></li>
+              <li><a href="#opravy-servis">Výmena batérie</a></li>
+              <li><a href="#opravy-servis">Diagnostika porúch</a></li>
+              <li><a href="#naradie">Orientačný cenník</a></li>
               <li><a href="#newsletter">Kontakt a objednávka</a></li>
             </ul>
           </div>
@@ -62,7 +62,7 @@
             <div class="logo">
               <img src="assets/images/white-logo.png" alt="Servis Mobilov">
             </div>
-            <p>Sme lokálny servis mobilov. Opravujeme rýchlo, transparentne a s dôrazom na kvalitu náhradných dielov.</p>
+            <p>Sme lokálny servis mobilov a ďalších zariadení. Opravujeme rýchlo, transparentne a s dôrazom na kvalitu náhradných dielov.</p>
           </div>
         </div>
       </div>

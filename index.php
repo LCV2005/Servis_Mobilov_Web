@@ -12,11 +12,11 @@
                 <div class="row">
                   <div class="col-lg-12">
                     <h2>Rýchly servis mobilov bez zbytočného čakania</h2>
-                      <p>Rozbitý displej, slabá batéria alebo problém s nabíjaním? Postaráme sa o váš telefón rýchlo, transparentne a za férovú cenu.</p>
+                      <p>Rozbitý displej, slabá batéria alebo problém s nabíjaním? Servisujeme mobily, tablety, smart hodinky aj ďalšie zariadenia rýchlo a za férovú cenu.</p>
                   </div>
                   <div class="col-lg-12">
                     <div class="white-button first-button scroll-to-section">
-                      <a href="#pricing">Pozrieť cenník <i class="fa fa-tags"></i></a>
+                      <a href="#naradie">Pozrieť cenník <i class="fa fa-tags"></i></a>
                     </div>
                     <div class="white-button scroll-to-section">
                       <a href="#newsletter">Objednať servis <i class="fa fa-tools"></i></a>
@@ -36,14 +36,14 @@
     </div>
   </div>
 
-  <div id="services" class="services section">
+  <div id="opravy-servis" class="services section">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
           <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
-            <h4>Úžasné <em>služby a funkcie</em> pre vás</h4>
+            <h4>Najčastejšie <em>servisné služby</em> pre vaše zariadenia</h4>
             <img src="assets/images/heading-line-dec.png" alt="">
-            <p>Poskytujeme servisné služby pre najčastejšie poruchy mobilných telefónov s dôrazom na rýchlosť a kvalitu opravy.</p>
+            <p>Riešime poruchy mobilov, tabletov, smart hodiniek aj príslušenstva s dôrazom na rýchlosť, kvalitu a jasnú komunikáciu.</p>
           </div>
         </div>
       </div>
@@ -53,8 +53,8 @@
         <div class="col-lg-3">
           <div class="service-item first-service">
             <div class="icon"></div>
-            <h4>Údržba aplikácie</h4>
-            <p>Pravidelné čistenie zariadenia, kontrola konektorov a prevencia pred ďalším poškodením.</p>
+            <h4>Výmena displeja a skla</h4>
+            <p>Profesionálna výmena poškodeného displeja alebo dotykového skla pre mobily a tablety.</p>
             <div class="text-button">
               <a href="#">Prečítať viac <i class="fa fa-arrow-right"></i></a>
             </div>
@@ -63,8 +63,8 @@
         <div class="col-lg-3">
           <div class="service-item second-service">
             <div class="icon"></div>
-            <h4>Raketová rýchlosť aplikácie</h4>
-            <p>Optimalizácia systému, odstránenie zbytočných procesov a zrýchlenie reakcie telefónu.</p>
+            <h4>Výmena batérie</h4>
+            <p>Keď batéria nevydrží, vymeníme ju za kvalitný diel a zariadenie opäť spoľahlivo funguje.</p>
             <div class="text-button">
               <a href="#">Prečítať viac <i class="fa fa-arrow-right"></i></a>
             </div>
@@ -73,8 +73,8 @@
         <div class="col-lg-3">
           <div class="service-item third-service">
             <div class="icon"></div>
-            <h4>Myšlienka viacerých pracovných postupov</h4>
-            <p>Diagnostika hardvéru aj softvéru na jednom mieste s jasným návrhom riešenia.</p>
+            <h4>Diagnostika poruchy</h4>
+            <p>Dôkladne otestujeme hardvér aj softvér a navrhneme najefektívnejší postup opravy.</p>
             <div class="text-button">
               <a href="#">Prečítať viac <i class="fa fa-arrow-right"></i></a>
             </div>
@@ -83,8 +83,8 @@
         <div class="col-lg-3">
           <div class="service-item fourth-service">
             <div class="icon"></div>
-            <h4>Pomoc a podpora 24/7</h4>
-            <p>Rýchla komunikácia a priebežné informácie o stave opravy počas celého procesu.</p>
+            <h4>Oprava nabíjania a konektorov</h4>
+            <p>Riešime problémy s nabíjaním, USB konektormi, tlačidlami aj ďalšími častými hardvérovými závadami.</p>
             <div class="text-button">
               <a href="#">Prečítať viac <i class="fa fa-arrow-right"></i></a>
             </div>
@@ -95,42 +95,42 @@
   </div>
 
   <!-- O nás -->
-  <div id="about" class="about-us section">
+  <div id="nahradne-diely" class="about-us section">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 align-self-center">
           <div class="section-heading">
-            <h4>O <em>tom, čo robíme</em> a kto sme</h4>
+            <h4>O <em>našom servise</em> a ako pracujeme</h4>
             <img src="assets/images/heading-line-dec.png" alt="">
-            <p>Stručný popis našej práce, tímu a hodnôt, ktoré prinášame zákazníkom.</p>
+            <p>Sme servisné centrum pre mobily a ďalšie zariadenia. Zakladáme si na presnej diagnostike, férových cenách a kvalite opravy.</p>
           </div>
           <div class="row">
             <div class="col-lg-6">
               <div class="box-item">
-                <h4><a href="#">Problémy s údržbou</a></h4>
-                <p>Ukážkový text</p>
+                <h4><a href="#">Rýchla diagnostika</a></h4>
+                <p>Zistenie príčiny poruchy už od 30 minút.</p>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="box-item">
-                <h4><a href="#">Podpora a pomoc 24/7</a></h4>
-                <p>Ukážkový text</p>
+                <h4><a href="#">Originál aj OEM diely</a></h4>
+                <p>Možnosť výberu podľa rozpočtu a požiadaviek.</p>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="box-item">
-                <h4><a href="#">Riešenie problémov</a></h4>
-                <p>Ukážkový text</p>
+                <h4><a href="#">Servis viacerých značiek</a></h4>
+                <p>Apple, Samsung, Xiaomi, Huawei a ďalšie.</p>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="box-item">
-                <h4><a href="#">Firemný vývoj</a></h4>
-                <p>Ukážkový text</p>
+                <h4><a href="#">Záruka na opravu</a></h4>
+                <p>Na vykonanú opravu poskytujeme záruku.</p>
               </div>
             </div>
             <div class="col-lg-12">
-              <p>Pomáhame vytvárať spoľahlivé riešenia, ktoré šetria čas a zjednodušujú prácu.</p>
+              <p>Každé zariadenie opravujeme tak, aby ste sa k nemu mohli vrátiť čo najskôr a bez ďalších komplikácií.</p>
               <div class="gradient-button">
                 <a href="#newsletter">Objednať diagnostiku</a>
               </div>
@@ -147,12 +147,12 @@
     </div>
   </div>
 
-  <div id="clients" class="the-clients">
+  <div id="prislusenstvo" class="the-clients">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
           <div class="section-heading">
-            <h4>Zistite, čo <em>hovoria klienti</em> o našom vývoji aplikácií</h4>
+            <h4>Zistite, čo <em>hovoria klienti</em> o našich opravách zariadení</h4>
             <img src="assets/images/heading-line-dec.png" alt="">
             <p>Spätná väzba od klientov, ktorí využívajú naše služby a riešenia.</p>
           </div>
@@ -167,11 +167,11 @@
                       <div class="thumb">
                         <div class="row">
                           <div class="col-lg-4 col-sm-4 col-12">
-                            <h4>David Martino Co</h4>
+                            <h4>Peter M.</h4>
                             <span class="date">30. november 2021</span>
                           </div>
                           <div class="col-lg-4 col-sm-4 d-none d-sm-block">
-                            <span class="category">Finančné aplikácie</span>
+                            <span class="category">Výmena displeja</span>
                           </div>
                           <div class="col-lg-4 col-sm-4 col-12">
                               <i class="fa fa-star"></i>
@@ -188,11 +188,11 @@
                       <div class="thumb">
                         <div class="row">
                           <div class="col-lg-4 col-sm-4 col-12">
-                            <h4>Jake Harris Nyo</h4>
+                            <h4>Jana K.</h4>
                             <span class="date">29. november 2021</span>
                           </div>
                           <div class="col-lg-4 col-sm-4 d-none d-sm-block">
-                            <span class="category">Digitálne podnikanie</span>
+                            <span class="category">Výmena batérie</span>
                           </div>
                           <div class="col-lg-4 col-sm-4 col-12">
                               <i class="fa fa-star"></i>
@@ -209,11 +209,11 @@
                       <div class="thumb">
                         <div class="row">
                           <div class="col-lg-4 col-sm-4 col-12">
-                            <h4>May Catherina</h4>
+                            <h4>Martin R.</h4>
                             <span class="date">27. november 2021</span>
                           </div>
                           <div class="col-lg-4 col-sm-4 d-none d-sm-block">
-                            <span class="category">Biznis a ekonómia</span>
+                            <span class="category">Oprava tabletu</span>
                           </div>
                           <div class="col-lg-4 col-sm-4 col-12">
                               <i class="fa fa-star"></i>
@@ -230,11 +230,11 @@
                       <div class="thumb">
                         <div class="row">
                           <div class="col-lg-4 col-sm-4 col-12">
-                            <h4>Random User</h4>
+                            <h4>Lucia S.</h4>
                             <span class="date">24. november 2021</span>
                           </div>
                           <div class="col-lg-4 col-sm-4 d-none d-sm-block">
-                            <span class="category">Nový ekosystém aplikácií</span>
+                            <span class="category">Čistenie po zatečení</span>
                           </div>
                           <div class="col-lg-4 col-sm-4 col-12">
                               <i class="fa fa-star"></i>
@@ -251,11 +251,11 @@
                       <div class="thumb">
                         <div class="row">
                           <div class="col-lg-4 col-sm-4 col-12">
-                            <h4>Mark Amber Do</h4>
+                            <h4>Tomáš B.</h4>
                             <span class="date">21 November 2021</span>
                           </div>
                           <div class="col-lg-4 col-sm-4 d-none d-sm-block">
-                            <span class="category">Web Development</span>
+                            <span class="category">Servis smart hodiniek</span>
                           </div>
                           <div class="col-lg-4 col-sm-4 col-12">
                               <i class="fa fa-star"></i>
@@ -279,13 +279,13 @@
                             <div class="col-lg-12">
                               <div class="client-content">
                                 <img src="assets/images/quote.png" alt="">
-                                <p>„Ukážkový text o spokojnosti klienta, spolupráci a výsledkoch projektu, doplnený o krátky opis skúsenosti s našou službou.“</p>
+                                <p>"Displej na mojom telefóne bol vymenený za pár hodín. Prístup bol profesionálny a cena presne podľa dohody."</p>
                               </div>
                               <div class="down-content">
                                 <img src="assets/images/client-image.jpg" alt="">
                                 <div class="right-content">
-                                  <h4>David Martino</h4>
-                                  <span>Generálny riaditeľ spoločnosti David Company</span>
+                                  <h4>Peter M.</h4>
+                                  <span>zákazník servisu mobilov</span>
                                 </div>
                               </div>
                             </div>
@@ -300,13 +300,13 @@
                             <div class="col-lg-12">
                               <div class="client-content">
                                 <img src="assets/images/quote.png" alt="">
-                                <p>„Vyjadrenie technického riaditeľa o stabilite riešenia, rýchlosti dodania a kvalite podpory.“</p>
+                                <p>"Batéria sa vybíjala za pár hodín. Po výmene vydrží celý deň a telefón je opäť spoľahlivý."</p>
                               </div>
                               <div class="down-content">
                                 <img src="assets/images/client-image.jpg" alt="">
                                 <div class="right-content">
-                                  <h4>Jake H. Nyo</h4>
-                                  <span>Technický riaditeľ Digital Company</span>
+                                  <h4>Jana K.</h4>
+                                  <span>zákazníčka servisu tabletov</span>
                                 </div>
                               </div>
                             </div>
@@ -321,13 +321,13 @@
                             <div class="col-lg-12">
                               <div class="client-content">
                                 <img src="assets/images/quote.png" alt="">
-                                <p>„Spätná väzba od zakladateľky o tom, ako riešenie pomohlo zrýchliť prácu tímu.“</p>
+                                <p>"Tablet po páde vôbec nereagoval. Diagnostika aj oprava prebehli rýchlo a všetko funguje bez problémov."</p>
                               </div>
                               <div class="down-content">
                                 <img src="assets/images/client-image.jpg" alt="">
                                 <div class="right-content">
-                                  <h4>May C.</h4>
-                                  <span>Zakladateľka spoločnosti Catherina Co.</span>
+                                  <h4>Martin R.</h4>
+                                  <span>firemný zákazník</span>
                                 </div>
                               </div>
                             </div>
@@ -342,13 +342,13 @@
                             <div class="col-lg-12">
                               <div class="client-content">
                                 <img src="assets/images/quote.png" alt="">
-                                <p>„Krátke hodnotenie o spoľahlivosti, komunikácii a podpore počas spolupráce.“</p>
+                                <p>"Po zatečení mi zachránili dáta aj zariadenie. Oceňujem najmä komunikáciu a jasný postup opravy."</p>
                               </div>
                               <div class="down-content">
                                 <img src="assets/images/client-image.jpg" alt="">
                                 <div class="right-content">
-                                  <h4>Random Staff</h4>
-                                  <span>Manažér, Digital Company</span>
+                                  <h4>Lucia S.</h4>
+                                  <span>zákazníčka servisu</span>
                                 </div>
                               </div>
                             </div>
@@ -363,13 +363,13 @@
                             <div class="col-lg-12">
                               <div class="client-content">
                                 <img src="assets/images/quote.png" alt="">
-                                <p>„Spätná väzba o flexibilite tímu a rýchlej realizácii požiadaviek.“</p>
+                                <p>"Smart hodinky prestali nabíjať. Oprava prebehla rýchlo a dostal som aj odporúčania na prevenciu."</p>
                               </div>
                               <div class="down-content">
                                 <img src="assets/images/client-image.jpg" alt="">
                                 <div class="right-content">
-                                  <h4>Mark Am</h4>
-                                  <span>Technický riaditeľ, Amber Do Company</span>
+                                  <h4>Tomáš B.</h4>
+                                  <span>zákazník servisu smart zariadení</span>
                                 </div>
                               </div>
                             </div>
@@ -387,7 +387,7 @@
     </div>
   </div>
 
-  <div id="pricing" class="pricing-tables">
+  <div id="naradie" class="pricing-tables">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
@@ -399,61 +399,61 @@
         </div>
         <div class="col-lg-4">
           <div class="pricing-item-regular">
-            <span class="price">$12</span>
-            <h4>Štandardný plán aplikácie</h4>
+            <span class="price">od 39 EUR</span>
+            <h4>Základný servis</h4>
             <div class="icon">
               <img src="assets/images/pricing-table-01.png" alt="">
             </div>
             <ul>
-              <li>Ukážkový prvok balíka</li>
-              <li>20 TB úložiska</li>
-              <li class="non-function">Celoživotná podpora</li>
-              <li class="non-function">Prémiové doplnky</li>
-              <li class="non-function">Najrýchlejšia sieť</li>
-              <li class="non-function">Viac možností</li>
+              <li>Diagnostika zariadenia</li>
+              <li>Čistenie a základný servis</li>
+              <li>Optimalizácia systému</li>
+              <li class="non-function">Výmena displeja</li>
+              <li class="non-function">Mikropájkovanie dosky</li>
+              <li class="non-function">Prednostný termín</li>
             </ul>
             <div class="border-button">
-              <a href="#">Kúpiť tento plán teraz</a>
+              <a href="#newsletter">Objednať servis</a>
             </div>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="pricing-item-pro">
-            <span class="price">$25</span>
-            <h4>Biznis plán aplikácie</h4>
+            <span class="price">od 79 EUR</span>
+            <h4>Rozšírený servis</h4>
             <div class="icon">
               <img src="assets/images/pricing-table-01.png" alt="">
             </div>
             <ul>
-              <li>Ukážkový prvok balíka</li>
-              <li>50 TB úložiska</li>
-              <li>Celoživotná podpora</li>
-              <li>Prémiové doplnky</li>
-              <li class="non-function">Najrýchlejšia sieť</li>
-              <li class="non-function">Viac možností</li>
+              <li>Všetko zo Základného servisu</li>
+              <li>Výmena batérie alebo konektora</li>
+              <li>Prenastavenie a aktualizácia systému</li>
+              <li>Záloha dát pred opravou</li>
+              <li class="non-function">Mikropájkovanie dosky</li>
+              <li class="non-function">Expresné vybavenie do 2 hodín</li>
             </ul>
             <div class="border-button">
-              <a href="#">Kúpiť tento plán teraz</a>
+              <a href="#newsletter">Objednať servis</a>
             </div>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="pricing-item-regular">
-            <span class="price">$66</span>
-            <h4>Prémiový plán aplikácie</h4>
+            <span class="price">od 129 EUR</span>
+            <h4>Komplexná oprava</h4>
             <div class="icon">
               <img src="assets/images/pricing-table-01.png" alt="">
             </div>
             <ul>
-              <li>Ukážkový prvok balíka</li>
-              <li>120 TB úložiska</li>
-              <li>Celoživotná podpora</li>
-              <li>Prémiové doplnky</li>
-              <li>Najrýchlejšia sieť</li>
-              <li>Viac možností</li>
+              <li>Kompletná diagnostika zariadenia</li>
+              <li>Výmena displeja alebo zadného krytu</li>
+              <li>Riešenie zložitej hardvérovej poruchy</li>
+              <li>Obnova dát podľa možností zariadenia</li>
+              <li>Prednostný servis</li>
+              <li>Záruka na opravu</li>
             </ul>
             <div class="border-button">
-              <a href="#">Kúpiť tento plán teraz</a>
+              <a href="#newsletter">Objednať servis</a>
             </div>
           </div>
         </div>

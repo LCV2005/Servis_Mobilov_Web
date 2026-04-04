@@ -54,10 +54,10 @@
             <!-- ***** Začiatok menu ***** -->
             <ul class="nav">
               <li class="scroll-to-section"><a href="#top" class="active">Domov</a></li>
-              <li class="scroll-to-section"><a href="#services">Služby</a></li>
-              <li class="scroll-to-section"><a href="#about">O nás</a></li>
-              <li class="scroll-to-section"><a href="#pricing">Cenník</a></li>
-              <li class="scroll-to-section"><a href="#clients">Referencie</a></li>
+              <li class="scroll-to-section"><a href="#opravy-servis">Opravy a servis</a></li>
+              <li class="scroll-to-section"><a href="#nahradne-diely">Náhradné diely</a></li>
+              <li class="scroll-to-section"><a href="#naradie">Náradie</a></li>
+              <li class="scroll-to-section"><a href="#prislusenstvo">Príslušenstvo</a></li>
               <li><div class="gradient-button"><a class="scroll-to-section" href="#newsletter"><i class="fa fa-tools"></i> Objednať servis</a></div></li>
             </ul>        
             <a class='menu-trigger'>
@@ -73,84 +73,84 @@
   
   <div id="modal" class="popupContainer" style="display:none;">
     <div class="popupHeader">
-                <span class="header_title">Prihlásenie</span>
+                <span class="header_title">Rýchly kontakt</span>
         <span class="modal_close"><i class="fa fa-times"></i></span>
     </div>
 
     <section class="popupBody">
-        <!-- Prihlásenie cez sociálne siete -->
+        <!-- Rýchle možnosti kontaktu -->
         <div class="social_login">
             <div class="">
                 <a href="#" class="social_box fb">
-                    <span class="icon"><i class="fab fa-facebook"></i></span>
-                    <span class="icon_title">Prepojiť s Facebookom</span>
+              <span class="icon"><i class="fa fa-phone"></i></span>
+              <span class="icon_title">Zavolajte nám: +421 911 222 333</span>
 
                 </a>
 
                 <a href="#" class="social_box google">
-                    <span class="icon"><i class="fab fa-google-plus"></i></span>
-                    <span class="icon_title">Prepojiť s Googlom</span>
+              <span class="icon"><i class="fa fa-envelope"></i></span>
+              <span class="icon_title">Napíšte nám: servis@servismobilov.sk</span>
                 </a>
             </div>
 
             <div class="centeredText">
-                <span>Alebo použite svoju e-mailovú adresu</span>
+            <span>Alebo vyplňte formulár objednávky servisu</span>
             </div>
 
             <div class="action_btns">
-                <div class="one_half"><a href="#" id="login_form" class="btn">Prihlásiť sa</a></div>
-                <div class="one_half last"><a href="#" id="register_form" class="btn">Registrovať sa</a></div>
+            <div class="one_half"><a href="#" id="login_form" class="btn">Mám zariadenie v servise</a></div>
+            <div class="one_half last"><a href="#" id="register_form" class="btn">Nová objednávka opravy</a></div>
             </div>
         </div>
 
-        <!-- Prihlasovací formulár s používateľským menom a heslom -->
+        <!-- Formulár pre zákazníka s existujúcou opravou -->
         <div class="user_login">
             <form>
-                <label>E-mail / používateľské meno</label>
+            <label>E-mail / telefón</label>
                 <input type="text" />
                 <br />
 
-                <label>Heslo</label>
-                <input type="password" />
+            <label>Kód zákazky</label>
+            <input type="text" />
                 <br />
 
                 <div class="checkbox">
                     <input id="remember" type="checkbox" />
-                    <label for="remember">Zapamätať si ma na tomto počítači</label>
+              <label for="remember">Súhlasím so spracovaním údajov na účely kontaktovania</label>
                 </div>
 
                 <div class="action_btns">
                     <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Späť</a></div>
-                    <div class="one_half last"><a href="#" class="btn btn_red">Prihlásiť sa</a></div>
+              <div class="one_half last"><a href="#" class="btn btn_red">Odoslať dopyt</a></div>
                 </div>
             </form>
 
-            <a href="#" class="forgot_password">Zabudli ste heslo?</a>
+          <a href="#" class="forgot_password">Nemáte kód zákazky? Kontaktujte nás telefonicky.</a>
         </div>
 
-        <!-- Registračný formulár -->
+        <!-- Formulár novej objednávky opravy -->
         <div class="user_register">
             <form>
-                <label>Celé meno</label>
+            <label>Meno a priezvisko</label>
                 <input type="text" />
                 <br />
 
-                <label>E-mailová adresa</label>
+            <label>E-mailová adresa alebo telefón</label>
                 <input type="email" />
                 <br />
 
-                <label>Heslo</label>
-                <input type="password" />
+            <label>Zariadenie a popis poruchy</label>
+            <input type="text" />
                 <br />
 
                 <div class="checkbox">
                     <input id="send_updates" type="checkbox" />
-                    <label for="send_updates">Posielajte mi občasné e-mailové aktualizácie</label>
+              <label for="send_updates">Chcem dostávať informácie o stave opravy</label>
                 </div>
 
                 <div class="action_btns">
                     <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Späť</a></div>
-                    <div class="one_half last"><a href="#" class="btn btn_red">Registrovať sa</a></div>
+              <div class="one_half last"><a href="#" class="btn btn_red">Odoslať objednávku</a></div>
                 </div>
             </form>
         </div>
