@@ -1033,6 +1033,43 @@ Banner Style
   padding-top: 120px;
 }
 
+.subpage-page footer .section-heading h4 {
+  color: #2a2a2a;
+}
+
+.subpage-page footer .section-heading p {
+  color: #6c7a92;
+}
+
+.subpage-page footer #newsletter-form input {
+  color: #2a2a2a;
+  border-bottom-color: rgba(42, 42, 42, 0.35);
+}
+
+.subpage-page footer #newsletter-form input::placeholder {
+  color: rgba(42, 42, 42, 0.6);
+}
+
+.subpage-page footer #newsletter-form button {
+  color: #fff;
+  background: linear-gradient(105deg, rgba(91,104,235,1) 0%, rgba(40,225,253,1) 100%);
+}
+
+.subpage-page footer .footer-widget h4,
+.subpage-page footer .footer-widget p,
+.subpage-page footer .footer-widget p a,
+.subpage-page footer .footer-widget ul li a {
+  color: #2a2a2a;
+}
+
+.subpage-page footer .footer-widget h4 {
+  margin-bottom: 18px;
+}
+
+.subpage-page footer .footer-widget ul li a:hover {
+  color: #4b8ef1;
+}
+
 .subpage-content {
   padding: 0 0 90px 0;
   margin-top: 240px;
