@@ -1592,15 +1592,18 @@ footer .section-heading h4 {
   text-align: center;
 }
 
-footer #search {
+footer #search,
+footer #newsletter-form {
   margin-bottom: 80px;
 }
 
-footer #search input::placeholder {
+footer #search input::placeholder,
+footer #newsletter-form input::placeholder {
   color: #fff;
 }
 
-footer #search input {
+footer #search input,
+footer #newsletter-form input {
   font-size: 15px;
   color: #fff;
   outline: none;
@@ -1611,7 +1614,8 @@ footer #search input {
   width: 100%;
 }
 
-footer #search button {
+footer #search button,
+footer #newsletter-form button {
   height: 46px;
   border-radius: 23px;
   border: 1px solid #fff;
@@ -1621,9 +1625,14 @@ footer #search button {
   transition: all .5s;
 }
 
-footer #search button:hover {
+footer #search button:hover,
+footer #newsletter-form button:hover {
   background-color: #fff;
   color: #4b8ef1;
+}
+
+footer #newsletter-form fieldset {
+  margin-bottom: 16px;
 }
 
 .footer-widget .logo img {
