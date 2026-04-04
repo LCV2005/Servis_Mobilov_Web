@@ -2,6 +2,43 @@
 $currentPage = basename($_SERVER['PHP_SELF']);
 $basePath = $basePath ?? '';
 $isSubpage = $isSubpage ?? false;
+
+$serviceOrderData = null;
+$newsletterEmail = null;
+$popupLoginData = null;
+$popupRegisterData = null;
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  if (isset($_POST['service_order_submit'])) {
+    $serviceOrderData = [
+      'meno' => trim($_POST['meno'] ?? ''),
+      'kontakt' => trim($_POST['kontakt'] ?? ''),
+      'zariadenie' => trim($_POST['zariadenie'] ?? ''),
+      'popis' => trim($_POST['popis'] ?? ''),
+    ];
+  }
+
+  if (isset($_POST['newsletter_submit'])) {
+    $newsletterEmail = trim($_POST['email'] ?? '');
+  }
+
+  if (isset($_POST['popup_login_submit'])) {
+    $popupLoginData = [
+      'kontakt' => trim($_POST['login_contact'] ?? ''),
+      'kod' => trim($_POST['login_code'] ?? ''),
+      'remember' => isset($_POST['remember']) ? 'ano' : 'nie',
+    ];
+  }
+
+  if (isset($_POST['popup_register_submit'])) {
+    $popupRegisterData = [
+      'meno' => trim($_POST['register_name'] ?? ''),
+      'kontakt' => trim($_POST['register_contact'] ?? ''),
+      'zariadenie' => trim($_POST['register_device'] ?? ''),
+      'updates' => isset($_POST['send_updates']) ? 'ano' : 'nie',
+    ];
+  }
+}
 ?>
 <!DOCTYPE html>
 <html lang="sk">
@@ -75,6 +112,29 @@ $isSubpage = $isSubpage ?? false;
     </div>
   </header>
   <!-- ***** Koniec oblasti hlavičky ***** -->
+
+  <?php if (!empty($popupLoginData)): ?>
+    <div class="container" style="margin-top: 20px;">
+      <div class="alert alert-info" style="border-radius: 16px;">
+        <strong>Žiadosť o stav opravy odoslaná.</strong>
+        <div>Kontakt: <?php echo htmlspecialchars($popupLoginData['kontakt'], ENT_QUOTES, 'UTF-8'); ?></div>
+        <div>Kód zákazky: <?php echo htmlspecialchars($popupLoginData['kod'], ENT_QUOTES, 'UTF-8'); ?></div>
+        <div>Zapamätať údaje: <?php echo htmlspecialchars($popupLoginData['remember'], ENT_QUOTES, 'UTF-8'); ?></div>
+      </div>
+    </div>
+  <?php endif; ?>
+
+  <?php if (!empty($popupRegisterData)): ?>
+    <div class="container" style="margin-top: 20px;">
+      <div class="alert alert-info" style="border-radius: 16px;">
+        <strong>Nová objednávka z popup formulára odoslaná.</strong>
+        <div>Meno: <?php echo htmlspecialchars($popupRegisterData['meno'], ENT_QUOTES, 'UTF-8'); ?></div>
+        <div>Kontakt: <?php echo htmlspecialchars($popupRegisterData['kontakt'], ENT_QUOTES, 'UTF-8'); ?></div>
+        <div>Zariadenie: <?php echo htmlspecialchars($popupRegisterData['zariadenie'], ENT_QUOTES, 'UTF-8'); ?></div>
+        <div>Chcem info o stave opravy: <?php echo htmlspecialchars($popupRegisterData['updates'], ENT_QUOTES, 'UTF-8'); ?></div>
+      </div>
+    </div>
+  <?php endif; ?>
   
   <div id="modal" class="popupContainer" style="display:none;">
     <div class="popupHeader">
@@ -110,23 +170,23 @@ $isSubpage = $isSubpage ?? false;
 
         <!-- Formulár pre zákazníka s existujúcou opravou -->
         <div class="user_login">
-            <form>
-            <label>E-mail / telefón</label>
-                <input type="text" />
+          <form action="" method="POST">
+          <label for="login_contact">E-mail / telefón</label>
+            <input id="login_contact" type="text" name="login_contact" required />
                 <br />
 
-            <label>Kód zákazky</label>
-            <input type="text" />
+          <label for="login_code">Kód zákazky</label>
+          <input id="login_code" type="text" name="login_code" required />
                 <br />
 
                 <div class="checkbox">
-                    <input id="remember" type="checkbox" />
+              <input id="remember" type="checkbox" name="remember" />
               <label for="remember">Súhlasím so spracovaním údajov na účely kontaktovania</label>
                 </div>
 
                 <div class="action_btns">
                     <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Späť</a></div>
-              <div class="one_half last"><a href="#" class="btn btn_red">Odoslať dopyt</a></div>
+            <div class="one_half last"><button type="submit" name="popup_login_submit" class="btn btn_red">Odoslať dopyt</button></div>
                 </div>
             </form>
 
@@ -135,27 +195,27 @@ $isSubpage = $isSubpage ?? false;
 
         <!-- Formulár novej objednávky opravy -->
         <div class="user_register">
-            <form>
-            <label>Meno a priezvisko</label>
-                <input type="text" />
+          <form action="" method="POST">
+          <label for="register_name">Meno a priezvisko</label>
+            <input id="register_name" type="text" name="register_name" required />
                 <br />
 
-            <label>E-mailová adresa alebo telefón</label>
-                <input type="email" />
+          <label for="register_contact">E-mailová adresa alebo telefón</label>
+            <input id="register_contact" type="text" name="register_contact" required />
                 <br />
 
-            <label>Zariadenie a popis poruchy</label>
-            <input type="text" />
+          <label for="register_device">Zariadenie a popis poruchy</label>
+          <input id="register_device" type="text" name="register_device" required />
                 <br />
 
                 <div class="checkbox">
-                    <input id="send_updates" type="checkbox" />
+              <input id="send_updates" type="checkbox" name="send_updates" />
               <label for="send_updates">Chcem dostávať informácie o stave opravy</label>
                 </div>
 
                 <div class="action_btns">
                     <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Späť</a></div>
-              <div class="one_half last"><a href="#" class="btn btn_red">Odoslať objednávku</a></div>
+            <div class="one_half last"><button type="submit" name="popup_register_submit" class="btn btn_red">Odoslať objednávku</button></div>
                 </div>
             </form>
         </div>

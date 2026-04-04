@@ -18,6 +18,16 @@ include __DIR__ . '/../header.php';
 
     <div class="row">
       <div class="col-lg-8 offset-lg-2">
+        <?php if (!empty($serviceOrderData)): ?>
+          <div class="alert alert-success" style="margin-bottom: 24px; border-radius: 16px;">
+            <strong>Objednávka prijatá.</strong> Údaje z formulára:
+            <div>Meno: <?php echo htmlspecialchars($serviceOrderData['meno'], ENT_QUOTES, 'UTF-8'); ?></div>
+            <div>Kontakt: <?php echo htmlspecialchars($serviceOrderData['kontakt'], ENT_QUOTES, 'UTF-8'); ?></div>
+            <div>Zariadenie: <?php echo htmlspecialchars($serviceOrderData['zariadenie'], ENT_QUOTES, 'UTF-8'); ?></div>
+            <div>Popis: <?php echo htmlspecialchars($serviceOrderData['popis'], ENT_QUOTES, 'UTF-8'); ?></div>
+          </div>
+        <?php endif; ?>
+
         <form id="service-order-form" class="service-order-card" action="#" method="POST">
           <div class="row">
             <div class="col-lg-6">
@@ -46,7 +56,7 @@ include __DIR__ . '/../header.php';
             </div>
             <div class="col-lg-12 text-center">
               <fieldset class="service-order-actions">
-                <button type="submit" class="main-button">Odoslat objednavku <i class="fa fa-angle-right"></i></button>
+                <button type="submit" name="service_order_submit" class="main-button">Odoslat objednavku <i class="fa fa-angle-right"></i></button>
               </fieldset>
             </div>
           </div>

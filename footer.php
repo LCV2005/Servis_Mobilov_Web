@@ -17,11 +17,16 @@
               </div>
               <div class="col-lg-6 col-sm-6">
                 <fieldset>
-                  <button type="submit" class="main-button">Odoberať novinky <i class="fa fa-angle-right"></i></button>
+                  <button type="submit" name="newsletter_submit" class="main-button">Odoberať novinky <i class="fa fa-angle-right"></i></button>
                 </fieldset>
               </div>
             </div>
           </form>
+          <?php if (!empty($newsletterEmail)): ?>
+            <div class="alert alert-success" style="margin-top: 18px; border-radius: 16px;">
+              Ďakujeme, odber bol nastavený pre: <?php echo htmlspecialchars($newsletterEmail, ENT_QUOTES, 'UTF-8'); ?>
+            </div>
+          <?php endif; ?>
         </div>
       </div>
       <div class="row">
