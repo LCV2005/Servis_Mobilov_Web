@@ -1,5 +1,6 @@
 <?php
 $basePath = '../';
+$isSubpage = true;
 include __DIR__ . '/../header.php';
 ?>
 

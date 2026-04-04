@@ -1,6 +1,7 @@
 <?php
 $currentPage = basename($_SERVER['PHP_SELF']);
 $basePath = $basePath ?? '';
+$isSubpage = $isSubpage ?? false;
 ?>
 <!DOCTYPE html>
 <html lang="sk">
@@ -29,7 +30,7 @@ $basePath = $basePath ?? '';
 
   </head>
 
-<body>
+<body class="<?php echo $isSubpage ? 'subpage-page' : ''; ?>">
 
   <!-- ***** Začiatok prednačítania ***** -->
   <div id="js-preloader" class="js-preloader">

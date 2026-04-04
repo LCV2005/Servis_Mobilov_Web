@@ -958,15 +958,28 @@ Banner Style
 .subpage-banner {
   padding-top: 170px;
   padding-bottom: 50px;
+  background-image: none !important;
+  overflow: visible;
 }
 
 .subpage-banner:after {
-  display: none;
+  content: none !important;
+  display: none !important;
+}
+
+.subpage-banner:before {
+  content: none !important;
+  display: none !important;
 }
 
 .subpage-banner .container {
   position: relative;
   z-index: 2;
+}
+
+.subpage-page footer {
+  margin-top: 220px;
+  padding-top: 120px;
 }
 
 /* 
