@@ -1,6 +1,7 @@
 
 <?php include 'header.php'; ?>
 
+  <!-- Úvodná sekcia -->
   <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
     <div class="container">
       <div class="row">
@@ -10,15 +11,15 @@
               <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
                 <div class="row">
                   <div class="col-lg-12">
-                    <h2>Získajte najnovšiu aplikáciu z obchodov s aplikáciami</h2>
-                      <p>Chain App Dev je HTML5 šablóna vstupnej stránky aplikácie založená na rozložení Bootstrap v5.1.3, ktoré poskytuje TemplateMo, skvelá webová stránka na sťahovanie bezplatných CSS šablón.</p>
+                    <h2>Rýchly servis mobilov bez zbytočného čakania</h2>
+                      <p>Rozbitý displej, slabá batéria alebo problém s nabíjaním? Postaráme sa o váš telefón rýchlo, transparentne a za férovú cenu.</p>
                   </div>
                   <div class="col-lg-12">
                     <div class="white-button first-button scroll-to-section">
-                      <a href="#contact">Bezplatná ponuka <i class="fab fa-apple"></i></a>
+                      <a href="#pricing">Pozrieť cenník <i class="fa fa-tags"></i></a>
                     </div>
                     <div class="white-button scroll-to-section">
-                      <a href="#contact">Bezplatná ponuka <i class="fab fa-google-play"></i></a>
+                      <a href="#newsletter">Objednať servis <i class="fa fa-tools"></i></a>
                     </div>
                   </div>
                 </div>
@@ -42,7 +43,7 @@
           <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
             <h4>Úžasné <em>služby a funkcie</em> pre vás</h4>
             <img src="assets/images/heading-line-dec.png" alt="">
-            <p>Ak potrebujete najväčšiu zbierku HTML šablón pre svoje podnikanie, navštívte blog <a rel="nofollow" href="https://www.toocss.com/" target="_blank">TooCSS</a>. Ak potrebujete PHP skript pre kontaktný formulár, pre viac informácií prejdite na <a href="https://templatemo.com/contact" target="_parent">našu kontaktnú stránku</a>.</p>
+            <p>Poskytujeme servisné služby pre najčastejšie poruchy mobilných telefónov s dôrazom na rýchlosť a kvalitu opravy.</p>
           </div>
         </div>
       </div>
@@ -53,7 +54,7 @@
           <div class="service-item first-service">
             <div class="icon"></div>
             <h4>Údržba aplikácie</h4>
-            <p>Nie je dovolené znovu šíriť tento ZIP súbor šablóny na žiadnej inej webovej stránke.</p>
+            <p>Pravidelné čistenie zariadenia, kontrola konektorov a prevencia pred ďalším poškodením.</p>
             <div class="text-button">
               <a href="#">Prečítať viac <i class="fa fa-arrow-right"></i></a>
             </div>
@@ -63,7 +64,7 @@
           <div class="service-item second-service">
             <div class="icon"></div>
             <h4>Raketová rýchlosť aplikácie</h4>
-            <p>HTML šablónu Chain App Dev môžete používať. Tento layout môžete voľne upravovať alebo meniť.</p>
+            <p>Optimalizácia systému, odstránenie zbytočných procesov a zrýchlenie reakcie telefónu.</p>
             <div class="text-button">
               <a href="#">Prečítať viac <i class="fa fa-arrow-right"></i></a>
             </div>
@@ -73,7 +74,7 @@
           <div class="service-item third-service">
             <div class="icon"></div>
             <h4>Myšlienka viacerých pracovných postupov</h4>
-            <p>Ak je pre vás táto šablóna užitočná, podporte nás prosím <a rel="nofollow" href="https://paypal.me/templatemo" target="_blank">malým príspevkom cez PayPal</a>. Ďakujeme.</p>
+            <p>Diagnostika hardvéru aj softvéru na jednom mieste s jasným návrhom riešenia.</p>
             <div class="text-button">
               <a href="#">Prečítať viac <i class="fa fa-arrow-right"></i></a>
             </div>
@@ -83,7 +84,7 @@
           <div class="service-item fourth-service">
             <div class="icon"></div>
             <h4>Pomoc a podpora 24/7</h4>
-            <p>Ukážkový text o službách, ktoré poskytujeme, a o prínose pre váš projekt.</p>
+            <p>Rýchla komunikácia a priebežné informácie o stave opravy počas celého procesu.</p>
             <div class="text-button">
               <a href="#">Prečítať viac <i class="fa fa-arrow-right"></i></a>
             </div>
@@ -93,6 +94,7 @@
     </div>
   </div>
 
+  <!-- O nás -->
   <div id="about" class="about-us section">
     <div class="container">
       <div class="row">
@@ -130,9 +132,9 @@
             <div class="col-lg-12">
               <p>Pomáhame vytvárať spoľahlivé riešenia, ktoré šetria čas a zjednodušujú prácu.</p>
               <div class="gradient-button">
-                <a href="#">Spustiť 14-dňovú bezplatnú skúšobnú verziu</a>
+                <a href="#newsletter">Objednať diagnostiku</a>
               </div>
-              <span>*Bez nutnosti zadania kreditnej karty</span>
+              <span>*Úvodná diagnostika bez záväzku opravy</span>
             </div>
           </div>
         </div>
@@ -390,9 +392,9 @@
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
           <div class="section-heading">
-            <h4>Máme tie najlepšie <em>predobjednávkové ceny</em>, aké môžete získať</h4>
+            <h4>Jednoduchý a <em>prehľadný cenník</em> najčastejších opráv</h4>
             <img src="assets/images/heading-line-dec.png" alt="">
-            <p>Vyberte si balík, ktorý najlepšie vyhovuje vašim potrebám a rozpočtu.</p>
+            <p>Finálna cena závisí od modelu zariadenia a typu náhradného dielu.</p>
           </div>
         </div>
         <div class="col-lg-4">

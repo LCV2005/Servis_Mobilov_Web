@@ -5,13 +5,13 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Servis Mobilov - rýchle opravy mobilných telefónov, diagnostika a výmena displejov.">
+    <meta name="author" content="Servis Mobilov">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
-    <title>Chain App Dev - HTML5 šablóna vstupnej stránky aplikácie</title>
+    <title>Servis Mobilov | Rýchly a spoľahlivý servis telefónov</title>
 
     <!-- Základné CSS Bootstrapu -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -47,8 +47,8 @@
         <div class="col-12">
           <nav class="main-nav">
             <!-- ***** Začiatok loga ***** -->
-            <a href="index.html" class="logo">
-              <img src="assets/images/logo.png" alt="Chain App Dev">
+            <a href="index.php" class="logo">
+              <img src="assets/images/logo.png" alt="Servis Mobilov">
             </a>
             <!-- ***** Koniec loga ***** -->
             <!-- ***** Začiatok menu ***** -->
@@ -57,8 +57,8 @@
               <li class="scroll-to-section"><a href="#services">Služby</a></li>
               <li class="scroll-to-section"><a href="#about">O nás</a></li>
               <li class="scroll-to-section"><a href="#pricing">Cenník</a></li>
-              <li class="scroll-to-section"><a href="#newsletter">Novinky</a></li>
-              <li><div class="gradient-button"><a id="modal_trigger" href="#modal"><i class="fa fa-sign-in-alt"></i> Prihlásiť sa</a></div></li> 
+              <li class="scroll-to-section"><a href="#clients">Referencie</a></li>
+              <li><div class="gradient-button"><a class="scroll-to-section" href="#newsletter"><i class="fa fa-tools"></i> Objednať servis</a></div></li>
             </ul>        
             <a class='menu-trigger'>
                 <span>Menu</span>
