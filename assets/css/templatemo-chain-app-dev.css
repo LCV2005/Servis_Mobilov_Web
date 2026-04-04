@@ -332,6 +332,7 @@ header
   background-color: transparent;
   border-bottom: 1px solid rgba(42,42,42,0.2);
   position: absolute;
+  top: 0;
   left: 0px;
   right: 0px;
   z-index: 100;
@@ -429,6 +430,56 @@ header
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
   color: #4b8ef1!important;
+}
+
+@media (min-width: 993px) {
+  .header-area .main-nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 100px;
+  }
+
+  .header-area .main-nav .logo,
+  .background-header .main-nav .logo {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    z-index: 10;
+    margin-right: auto;
+  }
+
+  .header-area .main-nav .logo {
+    height: 100px;
+  }
+
+  .background-header .main-nav .logo {
+    height: 80px;
+  }
+
+  .header-area .main-nav .logo img,
+  .background-header .main-nav .logo img {
+    display: block;
+  }
+
+  .header-area .main-nav .nav,
+  .background-header .main-nav .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    margin: 0 auto;
+    float: none;
+  }
+
+  .header-area .main-nav .menu-trigger,
+  .background-header .main-nav .menu-trigger {
+    display: none !important;
+  }
 }
 
 .header-area .main-nav .nav li:last-child a.active {
@@ -980,6 +1031,82 @@ Banner Style
 .subpage-page footer {
   margin-top: 220px;
   padding-top: 120px;
+}
+
+.subpage-content {
+  padding: 0 0 90px 0;
+  margin-top: 240px;
+  position: relative;
+  z-index: 2;
+}
+
+.subpage-content .section-heading {
+  margin-top: 50px;
+  margin-bottom: 55px;
+}
+
+.subpage-content .section-heading p {
+  margin-top: 10px;
+}
+
+.subpage-content .service-item {
+  margin-bottom: 30px !important;
+}
+
+#service-order-form.service-order-card {
+  background: #ffffff;
+  border: 1px solid #e9edf5;
+  border-radius: 22px;
+  box-shadow: 0 18px 45px rgba(75, 142, 241, 0.12);
+  padding: 28px;
+}
+
+#service-order-form fieldset {
+  margin-bottom: 16px;
+}
+
+#service-order-form label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2a2a2a;
+  margin-bottom: 8px;
+}
+
+#service-order-form input,
+#service-order-form textarea {
+  width: 100%;
+  border: 1px solid #d7e2f2;
+  border-radius: 12px;
+  padding: 12px 14px;
+  color: #2a2a2a;
+  background-color: #f9fbff;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+#service-order-form input:focus,
+#service-order-form textarea:focus {
+  outline: none;
+  border-color: #4b8ef1;
+  box-shadow: 0 0 0 3px rgba(75, 142, 241, 0.18);
+  background-color: #ffffff;
+}
+
+#service-order-form textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+#service-order-form .service-order-actions {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  #service-order-form.service-order-card {
+    padding: 20px;
+    border-radius: 16px;
+  }
 }
 
 /* 

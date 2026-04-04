@@ -4,7 +4,7 @@ $isSubpage = true;
 include __DIR__ . '/../header.php';
 ?>
 
-<div class="main-banner subpage-banner">
+<div class="subpage-content">
   <div class="container">
     <div class="row">
       <div class="col-lg-8 offset-lg-2">
@@ -18,30 +18,34 @@ include __DIR__ . '/../header.php';
 
     <div class="row">
       <div class="col-lg-8 offset-lg-2">
-        <form id="service-order-form" action="#" method="POST">
+        <form id="service-order-form" class="service-order-card" action="#" method="POST">
           <div class="row">
             <div class="col-lg-6">
-              <fieldset style="margin-bottom: 16px;">
-                <input type="text" name="meno" placeholder="Meno a priezvisko" required class="email">
+              <fieldset>
+                <label for="meno">Meno a priezvisko</label>
+                <input id="meno" type="text" name="meno" placeholder="Meno a priezvisko" required>
               </fieldset>
             </div>
             <div class="col-lg-6">
-              <fieldset style="margin-bottom: 16px;">
-                <input type="text" name="kontakt" placeholder="Telefon alebo e-mail" required class="email">
+              <fieldset>
+                <label for="kontakt">Telefon alebo e-mail</label>
+                <input id="kontakt" type="text" name="kontakt" placeholder="Telefon alebo e-mail" required>
               </fieldset>
             </div>
             <div class="col-lg-12">
-              <fieldset style="margin-bottom: 16px;">
-                <input type="text" name="zariadenie" placeholder="Typ zariadenia (mobil, tablet, hodinky...)" required class="email">
+              <fieldset>
+                <label for="zariadenie">Typ zariadenia</label>
+                <input id="zariadenie" type="text" name="zariadenie" placeholder="Mobil, tablet, hodinky..." required>
               </fieldset>
             </div>
             <div class="col-lg-12">
-              <fieldset style="margin-bottom: 20px;">
-                <textarea name="popis" rows="5" placeholder="Strucny popis poruchy" required style="width: 100%; border-radius: 12px; border: 1px solid #ddd; padding: 14px;"></textarea>
+              <fieldset>
+                <label for="popis">Popis poruchy</label>
+                <textarea id="popis" name="popis" rows="5" placeholder="Strucny popis poruchy" required></textarea>
               </fieldset>
             </div>
             <div class="col-lg-12 text-center">
-              <fieldset>
+              <fieldset class="service-order-actions">
                 <button type="submit" class="main-button">Odoslat objednavku <i class="fa fa-angle-right"></i></button>
               </fieldset>
             </div>

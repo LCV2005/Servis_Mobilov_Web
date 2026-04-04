@@ -4,7 +4,7 @@ $isSubpage = true;
 include __DIR__ . '/../header.php';
 ?>
 
-<div class="main-banner subpage-banner">
+<div class="subpage-content">
   <div class="container">
     <div class="row">
       <div class="col-lg-8 offset-lg-2">
