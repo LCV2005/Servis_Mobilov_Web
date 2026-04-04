@@ -1,3 +1,4 @@
+<?php $basePath = $basePath ?? ''; ?>
   <footer id="newsletter">
     <div class="container">
       <div class="row">
@@ -36,11 +37,11 @@
           <div class="footer-widget">
             <h4>O nás</h4>
             <ul>
-              <li><a href="index.php">Domov</a></li>
-              <li><a href="opravy-servis.php">Opravy a servis</a></li>
-              <li><a href="nahradne-diely.php">Náhradné diely</a></li>
-              <li><a href="prislusenstvo.php">Príslušenstvo</a></li>
-              <li><a href="naradie.php">Náradie</a></li>
+              <li><a href="<?php echo $basePath; ?>index.php">Domov</a></li>
+              <li><a href="<?php echo $basePath; ?>podstranky/opravy-servis.php">Opravy a servis</a></li>
+              <li><a href="<?php echo $basePath; ?>podstranky/nahradne-diely.php">Náhradné diely</a></li>
+              <li><a href="<?php echo $basePath; ?>podstranky/prislusenstvo.php">Príslušenstvo</a></li>
+              <li><a href="<?php echo $basePath; ?>podstranky/naradie.php">Náradie</a></li>
             </ul>
           </div>
         </div>
@@ -48,11 +49,11 @@
           <div class="footer-widget">
             <h4>Užitočné odkazy</h4>
             <ul>
-              <li><a href="opravy-servis.php">Výmena displeja</a></li>
-              <li><a href="opravy-servis.php">Výmena batérie</a></li>
-              <li><a href="opravy-servis.php">Diagnostika porúch</a></li>
-              <li><a href="naradie.php">Orientačný cenník</a></li>
-              <li><a href="objednat-servis.php">Kontakt a objednávka</a></li>
+              <li><a href="<?php echo $basePath; ?>podstranky/opravy-servis.php">Výmena displeja</a></li>
+              <li><a href="<?php echo $basePath; ?>podstranky/opravy-servis.php">Výmena batérie</a></li>
+              <li><a href="<?php echo $basePath; ?>podstranky/opravy-servis.php">Diagnostika porúch</a></li>
+              <li><a href="<?php echo $basePath; ?>podstranky/naradie.php">Orientačný cenník</a></li>
+              <li><a href="<?php echo $basePath; ?>podstranky/objednat-servis.php">Kontakt a objednávka</a></li>
             </ul>
           </div>
         </div>
@@ -60,7 +61,7 @@
           <div class="footer-widget">
             <h4>O našej spoločnosti</h4>
             <div class="logo">
-              <img src="assets/images/white-logo.png" alt="Servis Mobilov">
+              <img src="<?php echo $basePath; ?>assets/images/white-logo.png" alt="Servis Mobilov">
             </div>
             <p>Sme lokálny servis mobilov a ďalších zariadení. Opravujeme rýchlo, transparentne a s dôrazom na kvalitu náhradných dielov.</p>
           </div>
@@ -71,12 +72,12 @@
 
 
   <!-- Skripty -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/animation.js"></script>
-  <script src="assets/js/imagesloaded.js"></script>
-  <script src="assets/js/popup.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="<?php echo $basePath; ?>vendor/jquery/jquery.min.js"></script>
+  <script src="<?php echo $basePath; ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="<?php echo $basePath; ?>assets/js/owl-carousel.js"></script>
+  <script src="<?php echo $basePath; ?>assets/js/animation.js"></script>
+  <script src="<?php echo $basePath; ?>assets/js/imagesloaded.js"></script>
+  <script src="<?php echo $basePath; ?>assets/js/popup.js"></script>
+  <script src="<?php echo $basePath; ?>assets/js/custom.js"></script>
 </body>
 </html>

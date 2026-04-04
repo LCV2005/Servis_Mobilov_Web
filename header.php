@@ -1,4 +1,7 @@
-<?php $currentPage = basename($_SERVER['PHP_SELF']); ?>
+<?php
+$currentPage = basename($_SERVER['PHP_SELF']);
+$basePath = $basePath ?? '';
+?>
 <!DOCTYPE html>
 <html lang="sk">
 
@@ -15,14 +18,14 @@
     <title>Servis Mobilov | Rýchly a spoľahlivý servis telefónov</title>
 
     <!-- Základné CSS Bootstrapu -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo $basePath; ?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
     <!-- Dodatočné CSS súbory -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1W4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/templatemo-chain-app-dev.css">
-    <link rel="stylesheet" href="assets/css/animated.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="<?php echo $basePath; ?>assets/css/templatemo-chain-app-dev.css">
+    <link rel="stylesheet" href="<?php echo $basePath; ?>assets/css/animated.css">
+    <link rel="stylesheet" href="<?php echo $basePath; ?>assets/css/owl.css">
 
   </head>
 
@@ -48,18 +51,18 @@
         <div class="col-12">
           <nav class="main-nav">
             <!-- ***** Začiatok loga ***** -->
-            <a href="index.php" class="logo">
-              <img src="assets/images/logo.png" alt="Servis Mobilov">
+            <a href="<?php echo $basePath; ?>index.php" class="logo">
+              <img src="<?php echo $basePath; ?>assets/images/logo.png" alt="Servis Mobilov">
             </a>
             <!-- ***** Koniec loga ***** -->
             <!-- ***** Začiatok menu ***** -->
             <ul class="nav">
-              <li><a href="index.php" class="<?php echo $currentPage === 'index.php' ? 'active' : ''; ?>">Domov</a></li>
-              <li><a href="opravy-servis.php" class="<?php echo $currentPage === 'opravy-servis.php' ? 'active' : ''; ?>">Opravy a servis</a></li>
-              <li><a href="nahradne-diely.php" class="<?php echo $currentPage === 'nahradne-diely.php' ? 'active' : ''; ?>">Náhradné diely</a></li>
-              <li><a href="naradie.php" class="<?php echo $currentPage === 'naradie.php' ? 'active' : ''; ?>">Náradie</a></li>
-              <li><a href="prislusenstvo.php" class="<?php echo $currentPage === 'prislusenstvo.php' ? 'active' : ''; ?>">Príslušenstvo</a></li>
-              <li><div class="gradient-button"><a href="objednat-servis.php" class="<?php echo $currentPage === 'objednat-servis.php' ? 'active' : ''; ?>"><i class="fa fa-tools"></i> Objednať servis</a></div></li>
+              <li><a href="<?php echo $basePath; ?>index.php" class="<?php echo $currentPage === 'index.php' ? 'active' : ''; ?>">Domov</a></li>
+              <li><a href="<?php echo $basePath; ?>podstranky/opravy-servis.php" class="<?php echo $currentPage === 'opravy-servis.php' ? 'active' : ''; ?>">Opravy a servis</a></li>
+              <li><a href="<?php echo $basePath; ?>podstranky/nahradne-diely.php" class="<?php echo $currentPage === 'nahradne-diely.php' ? 'active' : ''; ?>">Náhradné diely</a></li>
+              <li><a href="<?php echo $basePath; ?>podstranky/naradie.php" class="<?php echo $currentPage === 'naradie.php' ? 'active' : ''; ?>">Náradie</a></li>
+              <li><a href="<?php echo $basePath; ?>podstranky/prislusenstvo.php" class="<?php echo $currentPage === 'prislusenstvo.php' ? 'active' : ''; ?>">Príslušenstvo</a></li>
+              <li><div class="gradient-button"><a href="<?php echo $basePath; ?>podstranky/objednat-servis.php" class="<?php echo $currentPage === 'objednat-servis.php' ? 'active' : ''; ?>"><i class="fa fa-tools"></i> Objednať servis</a></div></li>
             </ul>        
             <a class='menu-trigger'>
                 <span>Menu</span>

@@ -1,4 +1,7 @@
-<?php include 'header.php'; ?>
+<?php
+$basePath = '../';
+include __DIR__ . '/../header.php';
+?>
 
 <div class="main-banner subpage-banner">
   <div class="container">
@@ -6,7 +9,7 @@
       <div class="col-lg-8 offset-lg-2">
         <div class="section-heading text-center">
           <h4>Opravy a <em>servis zariadeni</em></h4>
-          <img src="assets/images/heading-line-dec.png" alt="">
+          <img src="<?php echo $basePath; ?>assets/images/heading-line-dec.png" alt="">
           <p>Poskytujeme rychly a spolahlivy servis mobilov, tabletov a smart zariadeni pre bezne aj zlozite poruchy.</p>
         </div>
       </div>
@@ -41,4 +44,4 @@
   </div>
 </div>
 
-<?php include 'footer.php'; ?>
+<?php include __DIR__ . '/../footer.php'; ?>
