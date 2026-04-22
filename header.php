@@ -55,11 +55,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <title>Servis Mobilov | Rýchly a spoľahlivý servis telefónov</title>
 
-    <!-- Základné CSS Bootstrapu -->
+    
     <link href="<?php echo $basePath; ?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
-    <!-- Dodatočné CSS súbory -->
+    
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1W4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo $basePath; ?>assets/css/templatemo-chain-app-dev.css">
     <link rel="stylesheet" href="<?php echo $basePath; ?>assets/css/animated.css">
@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <body class="<?php echo $isSubpage ? 'subpage-page' : ''; ?>">
 
-  <!-- ***** Začiatok prednačítania ***** -->
+  
   <div id="js-preloader" class="js-preloader">
     <div class="preloader-inner">
       <span class="dot"></span>
@@ -80,38 +80,48 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       </div>
     </div>
   </div>
-  <!-- ***** Koniec prednačítania ***** -->
+  
 
-  <!-- ***** Začiatok oblasti hlavičky ***** -->
+  
   <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
     <div class="container">
       <div class="row">
         <div class="col-12">
           <nav class="main-nav">
-            <!-- ***** Začiatok loga ***** -->
+            
             <a href="<?php echo $basePath; ?>index.php" class="logo">
               <img src="<?php echo $basePath; ?>assets/images/logo.png" alt="Servis Mobilov">
             </a>
-            <!-- ***** Koniec loga ***** -->
-            <!-- ***** Začiatok menu ***** -->
+            
+            
             <ul class="nav">
               <li><a href="<?php echo $basePath; ?>index.php" class="<?php echo $currentPage === 'index.php' ? 'active' : ''; ?>">Domov</a></li>
               <li><a href="<?php echo $basePath; ?>podstranky/opravy-servis.php" class="<?php echo $currentPage === 'opravy-servis.php' ? 'active' : ''; ?>">Opravy a servis</a></li>
               <li><a href="<?php echo $basePath; ?>podstranky/nahradne-diely.php" class="<?php echo $currentPage === 'nahradne-diely.php' ? 'active' : ''; ?>">Náhradné diely</a></li>
               <li><a href="<?php echo $basePath; ?>podstranky/naradie.php" class="<?php echo $currentPage === 'naradie.php' ? 'active' : ''; ?>">Náradie</a></li>
               <li><a href="<?php echo $basePath; ?>podstranky/prislusenstvo.php" class="<?php echo $currentPage === 'prislusenstvo.php' ? 'active' : ''; ?>">Príslušenstvo</a></li>
-              <li><div class="gradient-button"><a href="<?php echo $basePath; ?>podstranky/objednat-servis.php" class="<?php echo $currentPage === 'objednat-servis.php' ? 'active' : ''; ?>"><i class="fa fa-tools"></i> Objednať servis</a></div></li>
             </ul>        
+            <div class="header-icons" aria-label="Rychly pristup">
+              <a href="<?php echo $basePath; ?>podstranky/objednat-servis.php" class="header-icon" title="Vybrat zariadenie" aria-label="Vybrat zariadenie">
+                <span class="header-icon-glyph" aria-hidden="true">M</span>
+              </a>
+              <a href="#modal" id="modal_trigger" class="header-icon" title="Ucet a prihlasenie" aria-label="Ucet a prihlasenie">
+                <span class="header-icon-glyph" aria-hidden="true">U</span>
+              </a>
+              <a href="<?php echo $basePath; ?>podstranky/prislusenstvo.php" class="header-icon" title="Kosik" aria-label="Kosik">
+                <span class="header-icon-glyph" aria-hidden="true">K</span>
+              </a>
+            </div>
             <a class='menu-trigger'>
                 <span>Menu</span>
             </a>
-            <!-- ***** Koniec menu ***** -->
+            
           </nav>
         </div>
       </div>
     </div>
   </header>
-  <!-- ***** Koniec oblasti hlavičky ***** -->
+  
 
   <?php if (!empty($popupLoginData)): ?>
     <div class="container" style="margin-top: 20px;">
@@ -139,21 +149,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <div id="modal" class="popupContainer" style="display:none;">
     <div class="popupHeader">
                 <span class="header_title">Rýchly kontakt</span>
-        <span class="modal_close"><i class="fa fa-times"></i></span>
+    <span class="modal_close" aria-label="Zavriet">&times;</span>
     </div>
 
     <section class="popupBody">
-        <!-- Rýchle možnosti kontaktu -->
+        
         <div class="social_login">
             <div class="">
                 <a href="#" class="social_box fb">
-              <span class="icon"><i class="fa fa-phone"></i></span>
+              <span class="icon" aria-hidden="true">&#9742;</span>
               <span class="icon_title">Zavolajte nám: +421 911 222 333</span>
 
                 </a>
 
                 <a href="#" class="social_box google">
-              <span class="icon"><i class="fa fa-envelope"></i></span>
+              <span class="icon" aria-hidden="true">&#9993;</span>
               <span class="icon_title">Napíšte nám: servis@servismobilov.sk</span>
                 </a>
             </div>
@@ -168,7 +178,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         </div>
 
-        <!-- Formulár pre zákazníka s existujúcou opravou -->
+        
         <div class="user_login">
           <form action="" method="POST">
           <label for="login_contact">E-mail / telefón</label>
@@ -185,7 +195,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
 
                 <div class="action_btns">
-                    <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Späť</a></div>
+                  <div class="one_half"><a href="#" class="btn back_btn">&larr; Späť</a></div>
             <div class="one_half last"><button type="submit" name="popup_login_submit" class="btn btn_red">Odoslať dopyt</button></div>
                 </div>
             </form>
@@ -193,7 +203,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <a href="#" class="forgot_password">Nemáte kód zákazky? Kontaktujte nás telefonicky.</a>
         </div>
 
-        <!-- Formulár novej objednávky opravy -->
+        
         <div class="user_register">
           <form action="" method="POST">
           <label for="register_name">Meno a priezvisko</label>
@@ -214,7 +224,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
 
                 <div class="action_btns">
-                    <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Späť</a></div>
+                  <div class="one_half"><a href="#" class="btn back_btn">&larr; Späť</a></div>
             <div class="one_half last"><button type="submit" name="popup_register_submit" class="btn btn_red">Odoslať objednávku</button></div>
                 </div>
             </form>

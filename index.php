@@ -1,7 +1,7 @@
 
 <?php include 'header.php'; ?>
 
-  <!-- Úvodná sekcia -->
+  
   <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
     <div class="container">
       <div class="row">
@@ -94,7 +94,7 @@
     </div>
   </div>
 
-  <!-- O nás -->
+  
   <div id="nahradne-diely" class="about-us section">
     <div class="container">
       <div class="row">

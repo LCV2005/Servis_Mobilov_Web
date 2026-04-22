@@ -1,38 +1,8 @@
-/*
 
-TemplateMo 570 Chain App Dev
 
-https://templatemo.com/tm-570-chain-app-dev
 
-*/
 
-/* ---------------------------------------------
-Table of contents
-------------------------------------------------
-01. font & reset css
-02. reset
-03. global styles
-04. header
-05. banner
-06. features
-07. testimonials
-08. contact
-09. footer
-10. preloader
-11. search
-12. portfolio
 
---------------------------------------------- */
-/* 
----------------------------------------------
-font & reset css
---------------------------------------------- 
-*/
-/* 
----------------------------------------------
-reset
---------------------------------------------- 
-*/
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
 s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
@@ -43,14 +13,14 @@ figure, header, nav, section, article, aside, footer, figcaption {
   outline: 0;
 }
 
-/* clear fix */
+
 .grid:after {
   content: '';
   display: block;
   clear: both;
 }
 
-/* ---- .grid-item ---- */
+
 
 .grid-sizer,
 .grid-item {
@@ -135,11 +105,7 @@ img {
   overflow: hidden;
 }
 
-/* 
----------------------------------------------
-global styles
---------------------------------------------- 
-*/
+
 html,
 body {
   background: #fff;
@@ -282,11 +248,7 @@ body {
 }
 
 
-/* 
----------------------------------------------
-header
---------------------------------------------- 
-*/
+
 
 .background-header {
   background-color: #fff !important;
@@ -322,10 +284,6 @@ header
   left: 50%;
   bottom: -20px;
   transform: translateX(-50%);
-}
-
-.background-header .nav li:last-child a.active:after {
-  background-color: transparent;
 }
 
 .header-area {
@@ -432,6 +390,48 @@ header
   color: #4b8ef1!important;
 }
 
+.header-area .main-nav .header-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+.header-area .main-nav .header-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #2a2a2a;
+  border: 1px solid rgba(75, 142, 241, 0.35);
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.header-area .main-nav .header-icon i {
+  font-size: 16px;
+}
+
+.header-area .main-nav .header-icon-glyph {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.header-area .main-nav .header-icon:hover {
+  color: #ffffff;
+  background-color: #4b8ef1;
+  border-color: #4b8ef1;
+}
+
+.background-header .main-nav .header-icon {
+  color: #2a2a2a;
+  background-color: #ffffff;
+  border-color: rgba(75, 142, 241, 0.45);
+}
+
 @media (min-width: 993px) {
   .header-area .main-nav {
     position: relative;
@@ -472,7 +472,7 @@ header
     justify-content: center;
     align-items: center;
     width: max-content;
-    margin: 0 auto;
+    margin: 0 0 0 auto;
     float: none;
   }
 
@@ -480,10 +480,6 @@ header
   .background-header .main-nav .menu-trigger {
     display: none !important;
   }
-}
-
-.header-area .main-nav .nav li:last-child a.active {
-  color: #fff !important;
 }
 
 .background-header .main-nav .nav li:hover a,
@@ -833,11 +829,7 @@ header
   }
 }
 
-/* 
----------------------------------------------
-preloader
---------------------------------------------- 
-*/
+
 
 .js-preloader {
     position: fixed;
@@ -935,11 +927,7 @@ preloader
 
 
 
-/* 
----------------------------------------------
-Banner Style
---------------------------------------------- 
-*/
+
 
 .main-banner {
   background-repeat: no-repeat;
@@ -1005,7 +993,7 @@ Banner Style
   color: #fff !important;
 }
 
-/* Keep subpage content above decorative overlays */
+
 .subpage-banner {
   padding-top: 170px;
   padding-bottom: 50px;
@@ -1146,11 +1134,7 @@ Banner Style
   }
 }
 
-/* 
----------------------------------------------
-Services Style
---------------------------------------------- 
-*/
+
 
 .services {
   padding-top: 130px;
@@ -1282,11 +1266,7 @@ Services Style
 
 
 
-/*
----------------------------------------------
-About Us
----------------------------------------------
-*/
+
 
 .about-us {
   padding-top: 130px;
@@ -1360,11 +1340,7 @@ About Us
 
 
 
-/* 
----------------------------------------------
-The Clients
----------------------------------------------
-*/
+
 
 .the-clients {
   margin-top: 130px;
@@ -1505,11 +1481,7 @@ The Clients
 }
 
 
-/* 
----------------------------------------------
-The Clients
----------------------------------------------
-*/
+
 
 .pricing-tables {
   padding-top: 130px;
@@ -1682,11 +1654,7 @@ The Clients
 
 
 
-/* 
----------------------------------------------
-Free Quote
---------------------------------------------- 
-*/
+
 
 .free-quote {
   background-image: url(../images/quote-bg.jpg);
@@ -1756,11 +1724,7 @@ Free Quote
 }
 
 
-/* 
----------------------------------------------
-Footer Style
---------------------------------------------- 
-*/
+
 
 footer {
   background-image: url(../images/footer-bg.png);
@@ -1891,11 +1855,7 @@ footer p a:hover {
 }
 
 
-/*
----------------------------------------------
-PopUp
----------------------------------------------
-*/
+
 
 #lean_overlay {
   position: fixed;
@@ -1958,7 +1918,7 @@ a.btn_red {
   width: 45%;
   margin-left: 5%;
 }
-/* Popup Styles*/
+
 
 .popupHeader {
   font-size: 16px;
@@ -1998,8 +1958,6 @@ a.btn_red {
 }
 
 .social_login .icon {
-  display: inline-block;
-  
   padding: 5px 10px;
   margin-right: 10px;
   float: left;
@@ -2050,7 +2008,7 @@ a.btn_red {
 .action_btns a {
   display: block;
 }
-/* User Login Form */
+
 
 .user_login {
   display: none;
@@ -2097,7 +2055,7 @@ a.btn_red {
   color: #4b8ef1;
   transition: all .3s;
 }
-/* User Register Form */
+
 
 .user_register {
   display: none;
@@ -2139,11 +2097,7 @@ a.btn_red {
 
 
 
-/* 
----------------------------------------------
-responsive
---------------------------------------------- 
-*/
+
 
 
 
@@ -2174,6 +2128,32 @@ responsive
 }
 
 @media (max-width: 992px) {
+  .header-area .main-nav .header-icons,
+  .background-header .main-nav .header-icons {
+    display: flex;
+    position: absolute;
+    right: 90px;
+    top: 20px;
+    margin-left: 0;
+    gap: 8px;
+  }
+
+  .header-area .main-nav .header-icon,
+  .background-header .main-nav .header-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .header-area .main-nav .header-icon i,
+  .background-header .main-nav .header-icon i {
+    font-size: 14px;
+  }
+
+  .header-area .main-nav .header-icon-glyph,
+  .background-header .main-nav .header-icon-glyph {
+    font-size: 13px;
+  }
+
   .header-area {
     background-color: #fff;
   }
@@ -2281,6 +2261,29 @@ responsive
 }
 
 @media (max-width: 767px) {
+  .header-area .main-nav .header-icons,
+  .background-header .main-nav .header-icons {
+    right: 78px;
+    top: 24px;
+    gap: 6px;
+  }
+
+  .header-area .main-nav .header-icon,
+  .background-header .main-nav .header-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .header-area .main-nav .header-icon i,
+  .background-header .main-nav .header-icon i {
+    font-size: 12px;
+  }
+
+  .header-area .main-nav .header-icon-glyph,
+  .background-header .main-nav .header-icon-glyph {
+    font-size: 12px;
+  }
+
   .the-clients .naccs .menu div {
     text-align: center;
   }

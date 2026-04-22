@@ -11,7 +11,34 @@ include __DIR__ . '/../header.php';
         <div class="section-heading text-center">
           <h4>Objednat <em>servis</em></h4>
           <img src="<?php echo $basePath; ?>assets/images/heading-line-dec.png" alt="">
-          <p>Vyplnte formular a my vas budeme kontaktovat s terminom a odhadom ceny opravy.</p>
+          <p>Vyplnte formular a my sa vam ozveme s cenou a terminom.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="margin-bottom: 24px;">
+      <div class="col-lg-4">
+        <div class="service-item" style="margin-bottom: 24px;">
+          <h4>Express servis</h4>
+          <p>Najrychlejsie vybavenie pre urgentne opravy.</p>
+          <p><strong>Vhodne pre:</strong> podnikatelov a firemnych klientov</p>
+          <div class="gradient-button" style="margin-top: 12px;"><a href="#service-order-form">Vybrat express servis</a></div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="service-item" style="margin-bottom: 24px;">
+          <h4>Standard servis</h4>
+          <p>Bezny servis pre vacsinu poruch.</p>
+          <p><strong>Vhodne pre:</strong> bezne poruchy zariadeni</p>
+          <div class="gradient-button" style="margin-top: 12px;"><a href="#service-order-form">Vybrat standard servis</a></div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="service-item" style="margin-bottom: 24px;">
+          <h4>Diagnostika bez zavazku</h4>
+          <p>Najprv zistime chybu, potom navrhneme opravu.</p>
+          <p><strong>Vhodne pre:</strong> nezname alebo kombinovane zavady</p>
+          <div class="gradient-button" style="margin-top: 12px;"><a href="#service-order-form">Objednat diagnostiku</a></div>
         </div>
       </div>
     </div>
@@ -61,6 +88,19 @@ include __DIR__ . '/../header.php';
             </div>
           </div>
         </form>
+
+        <div class="service-item" style="margin-top: 24px; margin-bottom: 24px;">
+          <h4>Co sa deje po odoslani objednavky</h4>
+          <p>1) Potvrdime prijatie. 2) Posleme cenu. 3) Dohodneme termin. 4) Opravime zariadenie.</p>
+          <p><strong>Dolezite:</strong> cim presnejsi popis poruchy uvediete, tym rychlejsie pripravime riesenie.</p>
+          <div class="gradient-button" style="margin-top: 12px;"><a href="#service-order-form">Vyplnit servisny formular</a></div>
+        </div>
+
+        <div class="service-item" style="margin-bottom: 24px;">
+          <h4>Odporucania pred odovzdanim zariadenia</h4>
+          <p>Pred odovzdanim odporucame zalohu dat a odhlasenie citlivych uctov.</p>
+          <div class="gradient-button" style="margin-top: 12px;"><a href="<?php echo $basePath; ?>podstranky/prislusenstvo.php">Pozriet odporucane prislusenstvo</a></div>
+        </div>
       </div>
     </div>
   </div>

@@ -76,7 +76,7 @@
   </footer>
 
 
-  <!-- Skripty -->
+  
   <script src="<?php echo $basePath; ?>vendor/jquery/jquery.min.js"></script>
   <script src="<?php echo $basePath; ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="<?php echo $basePath; ?>assets/js/owl-carousel.js"></script>
