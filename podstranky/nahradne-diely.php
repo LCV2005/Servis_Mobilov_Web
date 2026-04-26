@@ -4,7 +4,7 @@ $isSubpage = true;
 include __DIR__ . '/../header.php';
 ?>
 
-<div class="subpage-content">
+<div class="subpage-content nahradne-diely-page">
   <div class="container">
     <div class="row">
       <div class="col-lg-8 offset-lg-2">
@@ -18,7 +18,7 @@ include __DIR__ . '/../header.php';
 
     <div class="row">
       <div class="col-lg-6">
-        <div class="service-item" style="margin-bottom: 24px;">
+        <div class="service-item display-bg-card" style="margin-bottom: 24px;">
           <h4>Displeje a predne skla</h4>
           <p>LCD, OLED a predne skla pre najbeznejsie modely telefonov.</p>
           <p><strong>Cena:</strong> od 24 EUR</p>
@@ -27,7 +27,7 @@ include __DIR__ . '/../header.php';
         </div>
       </div>
       <div class="col-lg-6">
-        <div class="service-item" style="margin-bottom: 24px;">
+        <div class="service-item baterie-bg-card" style="margin-bottom: 24px;">
           <h4>Baterie a napajacie moduly</h4>
           <p>Nahradne baterie, charging porty a suvisiace moduly.</p>
           <p><strong>Cena:</strong> od 11 EUR</p>
@@ -36,7 +36,7 @@ include __DIR__ . '/../header.php';
         </div>
       </div>
       <div class="col-lg-6">
-        <div class="service-item" style="margin-bottom: 24px;">
+        <div class="service-item kamery-bg-card" style="margin-bottom: 24px;">
           <h4>Kamery, reproduktory a mikrofony</h4>
           <p>Predna a zadna kamera, reproduktory a mikrofony.</p>
           <p><strong>Cena:</strong> od 9 EUR</p>
@@ -45,7 +45,7 @@ include __DIR__ . '/../header.php';
         </div>
       </div>
       <div class="col-lg-6">
-        <div class="service-item" style="margin-bottom: 24px;">
+        <div class="service-item kryty-bg-card" style="margin-bottom: 24px;">
           <h4>Zadny kryt, tlacidla a drobne suciastky</h4>
           <p>Zadne kryty, tlacidla, SIM tray a male diely pre dokoncene opravy.</p>
           <p><strong>Cena:</strong> od 4 EUR</p>

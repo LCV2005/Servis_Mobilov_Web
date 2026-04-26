@@ -18,7 +18,7 @@ include __DIR__ . '/../header.php';
 
     <div class="row">
       <div class="col-lg-6">
-        <div class="service-item" style="margin-bottom: 24px;">
+        <div class="service-item vymenne-displeje-bg-card" style="margin-bottom: 24px;">
           <h4>Vymenne displeje a dotykove skla</h4>
           <p>Displeje a dotykove skla pre najbeznejsie modely.</p>
           <p><strong>Cena:</strong> od 29 EUR</p>
@@ -27,7 +27,7 @@ include __DIR__ . '/../header.php';
         </div>
       </div>
       <div class="col-lg-6">
-        <div class="service-item" style="margin-bottom: 24px;">
+        <div class="service-item baterka-atd-bg-card" style="margin-bottom: 24px;">
           <h4>Baterie, konektory a flex kable</h4>
           <p>Baterie, konektory a flex kable pripravene na montaz.</p>
           <p><strong>Cena:</strong> od 12 EUR</p>
@@ -36,7 +36,7 @@ include __DIR__ . '/../header.php';
         </div>
       </div>
       <div class="col-lg-6">
-        <div class="service-item" style="margin-bottom: 24px;">
+        <div class="service-item naradie-bg-card" style="margin-bottom: 24px;">
           <h4>Servisne naradie pre opravy</h4>
           <p>Skrutkovace, pinzety, otvaracie sady a cistiace pomocky.</p>
           <p><strong>Cena:</strong> od 6 EUR</p>
@@ -45,7 +45,7 @@ include __DIR__ . '/../header.php';
         </div>
       </div>
       <div class="col-lg-6">
-        <div class="service-item" style="margin-bottom: 24px;">
+        <div class="service-item doplnky-bg-card" style="margin-bottom: 24px;">
           <h4>Doplnky a nabijanie</h4>
           <p>Kryty, kable, redukcie, powerbanky a bezkontaktne nabijacky.</p>
           <p><strong>Cena:</strong> od 5 EUR</p>
@@ -54,7 +54,7 @@ include __DIR__ . '/../header.php';
         </div>
       </div>
       <div class="col-lg-6">
-        <div class="service-item" style="margin-bottom: 24px;">
+        <div class="service-item pajka-bg-card" style="margin-bottom: 24px;">
           <h4>Mikropajkovacie a ESD vybavenie</h4>
           <p>ESD vybavenie a pomocky pre jemne opravy dosiek.</p>
           <p><strong>Cena:</strong> od 4 EUR</p>
@@ -63,7 +63,7 @@ include __DIR__ . '/../header.php';
         </div>
       </div>
       <div class="col-lg-6">
-        <div class="service-item" style="margin-bottom: 24px;">
+        <div class="service-item nastroje-bg-card" style="margin-bottom: 24px;">
           <h4>Montazne sady podla modelu</h4>
           <p>Sety diel + naradie pre konkretne modely telefonov.</p>
           <p><strong>Cena:</strong> od 34 EUR</p>

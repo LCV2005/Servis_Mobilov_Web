@@ -97,7 +97,7 @@ p {
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
-  color: #afafaf;
+  color: #000;
 }
 
 img {
@@ -272,7 +272,7 @@ body {
 
 .background-header .nav li a.active {
   position: relative;
-  color: #fff;
+  color: #4b8ef1;
 }
 
 .background-header .nav li a.active:after {
@@ -366,7 +366,7 @@ body {
 .background-header .main-nav .nav li:last-child a:hover,
 .header-area .main-nav .nav li:nth-child(6) a:hover ,
 .background-header .main-nav .nav li:nth-child(6) a:hover {
-  color: #fff !important;
+  color: #4b8ef1 !important;
 }
 
 .header-area .main-nav .nav li a {
@@ -421,8 +421,8 @@ body {
 }
 
 .header-area .main-nav .header-icon:hover {
-  color: #ffffff;
-  background-color: #4b8ef1;
+  color: #4b8ef1;
+  background-color: #ffffff;
   border-color: #4b8ef1;
 }
 
@@ -471,9 +471,35 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     width: max-content;
-    margin: 0 0 0 auto;
+    margin: 0;
     float: none;
+    gap: 40px;
+  }
+
+  .header-area .main-nav .nav li,
+  .background-header .main-nav .nav li {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .header-area .main-nav .nav li:nth-child(6),
+  .background-header .main-nav .nav li:nth-child(6),
+  .header-area .main-nav .nav li:last-child,
+  .background-header .main-nav .nav li:last-child {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .header-area .main-nav .nav li:last-child a,
+  .background-header .main-nav .nav li:last-child a,
+  .header-area .main-nav .nav li:nth-child(6) a,
+  .background-header .main-nav .nav li:nth-child(6) a {
+    padding: 0 !important;
+    font-weight: 500;
   }
 
   .header-area .main-nav .menu-trigger,
@@ -1026,7 +1052,7 @@ body {
 }
 
 .subpage-page footer .section-heading p {
-  color: #6c7a92;
+  color: #000;
 }
 
 .subpage-page footer #newsletter-form input {
@@ -1036,6 +1062,11 @@ body {
 
 .subpage-page footer #newsletter-form input::placeholder {
   color: rgba(42, 42, 42, 0.6);
+}
+
+.subpage-page .header-area .main-nav .nav li a.active,
+.subpage-page .background-header .main-nav .nav li a.active {
+  color: #4b8ef1 !important;
 }
 
 .subpage-page footer #newsletter-form button {
@@ -1074,8 +1105,330 @@ body {
   margin-top: 10px;
 }
 
+.subpage-content.nahradne-diely-page .section-heading p {
+  color: #000;
+}
+
+.subpage-content.prislusenstvo-page .section-heading h4 {
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+  .subpage-content.prislusenstvo-page .section-heading h4 {
+    white-space: normal;
+  }
+}
+
 .subpage-content .service-item {
   margin-bottom: 30px !important;
+  width: 100%;
+}
+
+.subpage-content .service-item h4,
+.subpage-content .service-item p,
+.subpage-content .service-item p strong {
+  color: #000 !important;
+}
+
+.subpage-content .service-item:hover h4,
+.subpage-content .service-item:hover p,
+.subpage-content .service-item:hover p strong {
+  color: #000 !important;
+}
+
+.subpage-content .service-item.display-bg-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.subpage-content .service-item.display-bg-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url(../images/Displej.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.subpage-content .service-item.baterie-bg-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.subpage-content .service-item.baterie-bg-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url(../images/Baterie.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.subpage-content .service-item.kamery-bg-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.subpage-content .service-item.kamery-bg-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url(../images/Kamery.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.subpage-content .service-item.kryty-bg-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.subpage-content .service-item.kryty-bg-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url(../images/Kryty.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.subpage-content .service-item.vymenne-displeje-bg-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.subpage-content .service-item.vymenne-displeje-bg-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url(../images/VymenneDispleje.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.subpage-content .service-item.baterka-atd-bg-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.subpage-content .service-item.baterka-atd-bg-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url(../images/BaterkaATD.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.subpage-content .service-item.naradie-bg-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.subpage-content .service-item.naradie-bg-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url(../images/Naradie.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.subpage-content .service-item.doplnky-bg-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.subpage-content .service-item.doplnky-bg-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url(../images/Doplnky.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.subpage-content .service-item.pajka-bg-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.subpage-content .service-item.pajka-bg-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url(../images/Pajka.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.subpage-content .service-item.nastroje-bg-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.subpage-content .service-item.nastroje-bg-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url(../images/Nastroje.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.subpage-content .service-item.folie-bg-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.subpage-content .service-item.folie-bg-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url(../images/Folie.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.subpage-content .service-item.puzdra-bg-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.subpage-content .service-item.puzdra-bg-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url(../images/Puzdra.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.subpage-content .service-item.kable-bg-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.subpage-content .service-item.kable-bg-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url(../images/Kable.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.subpage-content .service-item.audio-bg-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.subpage-content .service-item.audio-bg-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url(../images/Audio.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.subpage-content .service-item.powerbank-bg-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.subpage-content .service-item.powerbank-bg-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url(../images/PowerBank.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.subpage-content .service-item.smart-bg-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.subpage-content .service-item.smart-bg-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url(../images/Smart.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+@media (min-width: 992px) {
+  .subpage-content .col-lg-6 .service-item {
+    min-height: 290px;
+  }
 }
 
 #service-order-form.service-order-card {
@@ -1370,17 +1723,17 @@ body {
 .menu .thumb span.date {
   display: inline-block;
   margin-top: 0px;
-  color: #afafaf;
+  color: #000;
 }
 
 .menu .thumb span.category,
 .menu .thumb span.rating {
   font-weight: 700;
-  color: #afafaf;
+  color: #000;
 }
 
 .menu .thumb i {
-  color: #afafaf;
+  color: #000;
 }
 
 .the-clients .naccs .menu div {
@@ -1564,7 +1917,7 @@ body {
 }
 
 .pricing-item-regular ul li.non-function {
-  color: #afafaf;
+  color: #000;
   text-decoration: line-through;
 }
 
@@ -1641,7 +1994,7 @@ body {
 }
 
 .pricing-item-pro ul li.non-function {
-  color: #afafaf;
+  color: #000;
   text-decoration: line-through;
 }
 
@@ -1696,7 +2049,7 @@ body {
   width: 100%;
   margin-top: 20px;
   margin-left: 30px;
-  color: #afafaf;
+  color: #000;
   font-weight: 400;
   font-size: 15px;
   height: 40px;
@@ -1988,7 +2341,7 @@ a.btn_red {
 }
 
 .centeredText {
-  color: #afafaf;
+  color: #000;
   text-align: center;
   margin: 20px 0;
   clear: both;
@@ -1997,7 +2350,7 @@ a.btn_red {
 }
 
 .user_login label {
-  color: #afafaf;
+  color: #000;
 }
 
 .action_btns {
@@ -2062,7 +2415,7 @@ a.btn_red {
 }
 
 .user_register label {
-  color: #afafaf;
+  color: #000;
   display: block;
   margin-bottom: 5px;
 }
@@ -2086,7 +2439,7 @@ a.btn_red {
 
 .user_register input[type="checkbox"]+label {
   float: left;
-  color: #afafaf;
+  color: #000;
 }
 
 .user_register .checkbox {
@@ -2165,7 +2518,7 @@ a.btn_red {
     margin-right: 0;
   }
   .main-banner .left-content p {
-    color: #afafaf;
+    color: #000;
     margin-right: 0;
   }
   .main-banner .left-content .white-button a {
@@ -2310,7 +2663,7 @@ a.btn_red {
   }
   footer #search input {
     border: 1px solid #eee;
-    color: #afafaf;
+    color: #000;
     background-color: #fff;
     border-radius: 23px;
     margin-bottom: 15px;

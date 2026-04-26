@@ -167,7 +167,7 @@
                       <div class="thumb">
                         <div class="row">
                           <div class="col-lg-4 col-sm-4 col-12">
-                            <h4>Peter M.</h4>
+                            <h4>Petra M.</h4>
                             <span class="date">30. november 2021</span>
                           </div>
                           <div class="col-lg-4 col-sm-4 d-none d-sm-block">
@@ -284,8 +284,8 @@
                               <div class="down-content">
                                 <img src="assets/images/client-image.jpg" alt="">
                                 <div class="right-content">
-                                  <h4>Peter M.</h4>
-                                  <span>zákazník servisu mobilov</span>
+                                  <h4>Petra M.</h4>
+                                  <span>zákazníčka servisu mobilov</span>
                                 </div>
                               </div>
                             </div>
@@ -399,7 +399,7 @@
         </div>
         <div class="col-lg-4">
           <div class="pricing-item-regular">
-            <span class="price">od 39 EUR</span>
+            <span class="price" style="color:#000;">od 39 EUR</span>
             <h4>Základný servis</h4>
             <div class="icon">
               <img src="assets/images/pricing-table-01.png" alt="">
@@ -419,7 +419,7 @@
         </div>
         <div class="col-lg-4">
           <div class="pricing-item-pro">
-            <span class="price">od 79 EUR</span>
+            <span class="price" style="color:#000;">od 79 EUR</span>
             <h4>Rozšírený servis</h4>
             <div class="icon">
               <img src="assets/images/pricing-table-01.png" alt="">
@@ -439,7 +439,7 @@
         </div>
         <div class="col-lg-4">
           <div class="pricing-item-regular">
-            <span class="price">od 129 EUR</span>
+            <span class="price" style="color:#000;">od 129 EUR</span>
             <h4>Komplexná oprava</h4>
             <div class="icon">
               <img src="assets/images/pricing-table-01.png" alt="">

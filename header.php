@@ -95,21 +95,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             
             
             <ul class="nav">
-              <li><a href="<?php echo $basePath; ?>index.php" class="<?php echo $currentPage === 'index.php' ? 'active' : ''; ?>">Domov</a></li>
-              <li><a href="<?php echo $basePath; ?>podstranky/opravy-servis.php" class="<?php echo $currentPage === 'opravy-servis.php' ? 'active' : ''; ?>">Opravy a servis</a></li>
-              <li><a href="<?php echo $basePath; ?>podstranky/nahradne-diely.php" class="<?php echo $currentPage === 'nahradne-diely.php' ? 'active' : ''; ?>">Náhradné diely</a></li>
-              <li><a href="<?php echo $basePath; ?>podstranky/naradie.php" class="<?php echo $currentPage === 'naradie.php' ? 'active' : ''; ?>">Náradie</a></li>
-              <li><a href="<?php echo $basePath; ?>podstranky/prislusenstvo.php" class="<?php echo $currentPage === 'prislusenstvo.php' ? 'active' : ''; ?>">Príslušenstvo</a></li>
+              <li><a href="<?php echo $basePath; ?>index.php" class="<?php echo $currentPage === 'index.php' ? 'active' : ''; ?>" style="<?php echo $currentPage === 'index.php' ? 'color:#4b8ef1!important;' : ''; ?>">Domov</a></li>
+              <li><a href="<?php echo $basePath; ?>podstranky/opravy-servis.php" class="<?php echo $currentPage === 'opravy-servis.php' ? 'active' : ''; ?>" style="<?php echo $currentPage === 'opravy-servis.php' ? 'color:#4b8ef1!important;' : ''; ?>">Opravy a servis</a></li>
+              <li><a href="<?php echo $basePath; ?>podstranky/nahradne-diely.php" class="<?php echo $currentPage === 'nahradne-diely.php' ? 'active' : ''; ?>" style="<?php echo $currentPage === 'nahradne-diely.php' ? 'color:#4b8ef1!important;' : ''; ?>">Náhradné diely</a></li>
+              <li><a href="<?php echo $basePath; ?>podstranky/naradie.php" class="<?php echo $currentPage === 'naradie.php' ? 'active' : ''; ?>" style="<?php echo $currentPage === 'naradie.php' ? 'color:#4b8ef1!important;' : ''; ?>">Náradie</a></li>
+              <li><a href="<?php echo $basePath; ?>podstranky/prislusenstvo.php" class="<?php echo $currentPage === 'prislusenstvo.php' ? 'active' : ''; ?>" style="<?php echo $currentPage === 'prislusenstvo.php' ? 'color:#4b8ef1!important;' : ''; ?>">Príslušenstvo</a></li>
             </ul>        
             <div class="header-icons" aria-label="Rychly pristup">
-              <a href="<?php echo $basePath; ?>podstranky/objednat-servis.php" class="header-icon" title="Vybrat zariadenie" aria-label="Vybrat zariadenie">
-                <span class="header-icon-glyph" aria-hidden="true">M</span>
-              </a>
-              <a href="#modal" id="modal_trigger" class="header-icon" title="Ucet a prihlasenie" aria-label="Ucet a prihlasenie">
-                <span class="header-icon-glyph" aria-hidden="true">U</span>
-              </a>
-              <a href="<?php echo $basePath; ?>podstranky/prislusenstvo.php" class="header-icon" title="Kosik" aria-label="Kosik">
-                <span class="header-icon-glyph" aria-hidden="true">K</span>
+              <a href="#modal" id="modal_trigger" class="header-icon" title="Rýchly kontakt" aria-label="Rýchly kontakt">
+                <span class="header-icon-glyph" aria-hidden="true">Rýchly kontakt</span>
               </a>
             </div>
             <a class='menu-trigger'>
