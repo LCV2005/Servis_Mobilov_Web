@@ -1,5 +1,4 @@
-
-<?php include 'header.php'; ?>
+<?php require_once 'header.php'; ?>
 
   
   <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
@@ -269,7 +268,7 @@
                       </div>
                     </div>
                   </div>
-                </div> 
+                </div>
                 <div class="col-lg-5">
                   <ul class="nacc">
                     <li class="active">
@@ -413,7 +412,7 @@
               <li class="non-function">Prednostný termín</li>
             </ul>
             <div class="border-button">
-              <a href="#newsletter">Objednať servis</a>
+              <a href="podstranky/objednat-servis.php">Objednať servis</a>
             </div>
           </div>
         </div>
@@ -433,7 +432,7 @@
               <li class="non-function">Expresné vybavenie do 2 hodín</li>
             </ul>
             <div class="border-button">
-              <a href="#newsletter">Objednať servis</a>
+              <a href="podstranky/objednat-servis.php">Objednať servis</a>
             </div>
           </div>
         </div>
@@ -453,12 +452,12 @@
               <li>Záruka na opravu</li>
             </ul>
             <div class="border-button">
-              <a href="#newsletter">Objednať servis</a>
+              <a href="podstranky/objednat-servis.php">Objednať servis</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div> 
+  </div>
 
-<?php include 'footer.php'; ?>
+<?php include_once 'footer.php'; ?>

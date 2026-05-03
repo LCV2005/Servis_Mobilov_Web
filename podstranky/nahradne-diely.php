@@ -23,7 +23,7 @@ include __DIR__ . '/../header.php';
           <p>LCD, OLED a predne skla pre najbeznejsie modely telefonov.</p>
           <p><strong>Cena:</strong> od 24 EUR</p>
           <p><strong>Dostupnost:</strong> skladom / na objednavku do 48 hodin</p>
-          <div class="gradient-button" style="margin-top: 12px;"><a href="<?php echo $basePath; ?>podstranky/objednat-servis.php">Overit kompatibilitu a objednat</a></div>
+          <div class="gradient-button" style="margin-top: 12px;"><a href="https://www.alza.sk/prislusenstvo-pre-mobilne-telefony/18844551.htm">Overit kompatibilitu a objednat</a></div>
         </div>
       </div>
       <div class="col-lg-6">
@@ -32,7 +32,7 @@ include __DIR__ . '/../header.php';
           <p>Nahradne baterie, charging porty a suvisiace moduly.</p>
           <p><strong>Cena:</strong> od 11 EUR</p>
           <p><strong>Dostupnost:</strong> najpredavanejsie modely ihned</p>
-          <div class="gradient-button" style="margin-top: 12px;"><a href="<?php echo $basePath; ?>podstranky/objednat-servis.php">Objednat diel pre svoj model</a></div>
+          <div class="gradient-button" style="margin-top: 12px;"><a href="https://www.alza.sk/prislusenstvo-pre-mobilne-telefony/18844551.htm">Objednat diel pre svoj model</a></div>
         </div>
       </div>
       <div class="col-lg-6">
@@ -41,7 +41,7 @@ include __DIR__ . '/../header.php';
           <p>Predna a zadna kamera, reproduktory a mikrofony.</p>
           <p><strong>Cena:</strong> od 9 EUR</p>
           <p><strong>Dostupnost:</strong> podla modelu zariadenia</p>
-          <div class="gradient-button" style="margin-top: 12px;"><a href="<?php echo $basePath; ?>podstranky/objednat-servis.php">Zistit dostupnost dielu</a></div>
+          <div class="gradient-button" style="margin-top: 12px;"><a href="https://www.alza.sk/prislusenstvo-pre-mobilne-telefony/18844551.htm">Zistit dostupnost dielu</a></div>
         </div>
       </div>
       <div class="col-lg-6">
@@ -50,7 +50,7 @@ include __DIR__ . '/../header.php';
           <p>Zadne kryty, tlacidla, SIM tray a male diely pre dokoncene opravy.</p>
           <p><strong>Cena:</strong> od 4 EUR</p>
           <p><strong>Dostupnost:</strong> rychle doskladnenie</p>
-          <div class="gradient-button" style="margin-top: 12px;"><a href="<?php echo $basePath; ?>podstranky/objednat-servis.php">Rezervovat suciastky</a></div>
+          <div class="gradient-button" style="margin-top: 12px;"><a href="https://www.alza.sk/prislusenstvo-pre-mobilne-telefony/18844551.htm">Rezervovat suciastky</a></div>
         </div>
       </div>
       <div class="col-lg-12">
@@ -66,7 +66,6 @@ include __DIR__ . '/../header.php';
           <h4>Ako objednat diely</h4>
           <p>Poslite znacku, model a diel. My overime dostupnost a posleme cenu.</p>
           <p><strong>B2B spolupraca:</strong> pravidelne odbery, mnozstevne ceny a priorita pri naskladneni.</p>
-          <div class="gradient-button" style="margin-top: 12px;"><a href="<?php echo $basePath; ?>podstranky/objednat-servis.php">Prejst na objednavku</a></div>
         </div>
       </div>
     </div>

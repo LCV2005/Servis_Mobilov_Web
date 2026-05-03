@@ -2,6 +2,8 @@
 $currentPage = basename($_SERVER['PHP_SELF']);
 $basePath = $basePath ?? '';
 $isSubpage = $isSubpage ?? false;
+$activeNavColor = 'color:#4b8ef1!important;';
+
 
 $serviceOrderData = null;
 $newsletterEmail = null;
@@ -15,6 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       'kontakt' => trim($_POST['kontakt'] ?? ''),
       'zariadenie' => trim($_POST['zariadenie'] ?? ''),
       'popis' => trim($_POST['popis'] ?? ''),
+      'service_type' => trim($_POST['service_type'] ?? ''),
     ];
   }
 
@@ -47,13 +50,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Servis Mobilov - rýchle opravy mobilných telefónov, diagnostika a výmena displejov.">
+    <meta name="description" content="Servis Mobilov - rĂ˝chle opravy mobilnĂ˝ch telefĂłnov, diagnostika a vĂ˝mena displejov.">
     <meta name="author" content="Servis Mobilov">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
-    <title>Servis Mobilov | Rýchly a spoľahlivý servis telefónov</title>
+    <title>Servis Mobilov | RĂ˝chly a spoÄľahlivĂ˝ servis telefĂłnov</title>
 
     
     <link href="<?php echo $basePath; ?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -95,15 +98,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             
             
             <ul class="nav">
-              <li><a href="<?php echo $basePath; ?>index.php" class="<?php echo $currentPage === 'index.php' ? 'active' : ''; ?>" style="<?php echo $currentPage === 'index.php' ? 'color:#4b8ef1!important;' : ''; ?>">Domov</a></li>
-              <li><a href="<?php echo $basePath; ?>podstranky/opravy-servis.php" class="<?php echo $currentPage === 'opravy-servis.php' ? 'active' : ''; ?>" style="<?php echo $currentPage === 'opravy-servis.php' ? 'color:#4b8ef1!important;' : ''; ?>">Opravy a servis</a></li>
-              <li><a href="<?php echo $basePath; ?>podstranky/nahradne-diely.php" class="<?php echo $currentPage === 'nahradne-diely.php' ? 'active' : ''; ?>" style="<?php echo $currentPage === 'nahradne-diely.php' ? 'color:#4b8ef1!important;' : ''; ?>">Náhradné diely</a></li>
-              <li><a href="<?php echo $basePath; ?>podstranky/naradie.php" class="<?php echo $currentPage === 'naradie.php' ? 'active' : ''; ?>" style="<?php echo $currentPage === 'naradie.php' ? 'color:#4b8ef1!important;' : ''; ?>">Náradie</a></li>
-              <li><a href="<?php echo $basePath; ?>podstranky/prislusenstvo.php" class="<?php echo $currentPage === 'prislusenstvo.php' ? 'active' : ''; ?>" style="<?php echo $currentPage === 'prislusenstvo.php' ? 'color:#4b8ef1!important;' : ''; ?>">Príslušenstvo</a></li>
+              <li><a href="<?php echo $basePath; ?>index.php" class="<?php echo $currentPage === 'index.php' ? 'active' : ''; ?>" style="<?php echo $currentPage === 'index.php' ? $activeNavColor : ''; ?>">Domov</a></li>
+              <li><a href="<?php echo $basePath; ?>podstranky/opravy-servis.php" class="<?php echo $currentPage === 'opravy-servis.php' ? 'active' : ''; ?>" style="<?php echo $currentPage === 'opravy-servis.php' ? $activeNavColor : ''; ?>">Opravy a servis</a></li>
+              <li><a href="<?php echo $basePath; ?>podstranky/nahradne-diely.php" class="<?php echo $currentPage === 'nahradne-diely.php' ? 'active' : ''; ?>" style="<?php echo $currentPage === 'nahradne-diely.php' ? $activeNavColor : ''; ?>">NĂˇhradnĂ© diely</a></li>
+              <li><a href="<?php echo $basePath; ?>podstranky/naradie.php" class="<?php echo $currentPage === 'naradie.php' ? 'active' : ''; ?>" style="<?php echo $currentPage === 'naradie.php' ? $activeNavColor : ''; ?>">NĂˇradie</a></li>
+              <li><a href="<?php echo $basePath; ?>podstranky/prislusenstvo.php" class="<?php echo $currentPage === 'prislusenstvo.php' ? 'active' : ''; ?>" style="<?php echo $currentPage === 'prislusenstvo.php' ? $activeNavColor : ''; ?>">PrĂ­sluĹˇenstvo</a></li>
             </ul>        
             <div class="header-icons" aria-label="Rychly pristup">
-              <a href="#modal" id="modal_trigger" class="header-icon" title="Rýchly kontakt" aria-label="Rýchly kontakt">
-                <span class="header-icon-glyph" aria-hidden="true">Rýchly kontakt</span>
+              <a href="#modal" id="modal_trigger" class="header-icon" title="RĂ˝chly kontakt" aria-label="RĂ˝chly kontakt">
+                <span class="header-icon-glyph" aria-hidden="true">RĂ˝chly kontakt</span>
               </a>
             </div>
             <a class='menu-trigger'>
@@ -120,10 +123,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <?php if (!empty($popupLoginData)): ?>
     <div class="container" style="margin-top: 20px;">
       <div class="alert alert-info" style="border-radius: 16px;">
-        <strong>Žiadosť o stav opravy odoslaná.</strong>
+        <strong>Ĺ˝iadosĹĄ o stav opravy odoslanĂˇ.</strong>
         <div>Kontakt: <?php echo htmlspecialchars($popupLoginData['kontakt'], ENT_QUOTES, 'UTF-8'); ?></div>
-        <div>Kód zákazky: <?php echo htmlspecialchars($popupLoginData['kod'], ENT_QUOTES, 'UTF-8'); ?></div>
-        <div>Zapamätať údaje: <?php echo htmlspecialchars($popupLoginData['remember'], ENT_QUOTES, 'UTF-8'); ?></div>
+        <div>KĂłd zĂˇkazky: <?php echo htmlspecialchars($popupLoginData['kod'], ENT_QUOTES, 'UTF-8'); ?></div>
+        <div>ZapamĂ¤taĹĄ Ăşdaje: <?php echo htmlspecialchars($popupLoginData['remember'], ENT_QUOTES, 'UTF-8'); ?></div>
       </div>
     </div>
   <?php endif; ?>
@@ -131,7 +134,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <?php if (!empty($popupRegisterData)): ?>
     <div class="container" style="margin-top: 20px;">
       <div class="alert alert-info" style="border-radius: 16px;">
-        <strong>Nová objednávka z popup formulára odoslaná.</strong>
+        <strong>NovĂˇ objednĂˇvka z popup formulĂˇra odoslanĂˇ.</strong>
         <div>Meno: <?php echo htmlspecialchars($popupRegisterData['meno'], ENT_QUOTES, 'UTF-8'); ?></div>
         <div>Kontakt: <?php echo htmlspecialchars($popupRegisterData['kontakt'], ENT_QUOTES, 'UTF-8'); ?></div>
         <div>Zariadenie: <?php echo htmlspecialchars($popupRegisterData['zariadenie'], ENT_QUOTES, 'UTF-8'); ?></div>
@@ -142,7 +145,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   
   <div id="modal" class="popupContainer" style="display:none;">
     <div class="popupHeader">
-                <span class="header_title">Rýchly kontakt</span>
+                <span class="header_title">RĂ˝chly kontakt</span>
     <span class="modal_close" aria-label="Zavriet">&times;</span>
     </div>
 
@@ -152,49 +155,49 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="">
                 <a href="#" class="social_box fb">
               <span class="icon" aria-hidden="true">&#9742;</span>
-              <span class="icon_title">Zavolajte nám: +421 911 222 333</span>
+              <span class="icon_title">Zavolajte nĂˇm: +421 911 222 333</span>
 
                 </a>
 
                 <a href="#" class="social_box google">
               <span class="icon" aria-hidden="true">&#9993;</span>
-              <span class="icon_title">Napíšte nám: servis@servismobilov.sk</span>
+              <span class="icon_title">NapĂ­Ĺˇte nĂˇm: servis@servismobilov.sk</span>
                 </a>
             </div>
 
             <div class="centeredText">
-            <span>Alebo vyplňte formulár objednávky servisu</span>
+            <span>Alebo vyplĹte formulĂˇr objednĂˇvky servisu</span>
             </div>
 
             <div class="action_btns">
-            <div class="one_half"><a href="#" id="login_form" class="btn">Mám zariadenie v servise</a></div>
-            <div class="one_half last"><a href="#" id="register_form" class="btn">Nová objednávka opravy</a></div>
+            <div class="one_half"><a href="#" id="login_form" class="btn">MĂˇm zariadenie v servise</a></div>
+            <div class="one_half last"><a href="#" id="register_form" class="btn">NovĂˇ objednĂˇvka opravy</a></div>
             </div>
         </div>
 
         
         <div class="user_login">
           <form action="" method="POST">
-          <label for="login_contact">E-mail / telefón</label>
+          <label for="login_contact">E-mail / telefĂłn</label>
             <input id="login_contact" type="text" name="login_contact" required />
                 <br />
 
-          <label for="login_code">Kód zákazky</label>
+          <label for="login_code">KĂłd zĂˇkazky</label>
           <input id="login_code" type="text" name="login_code" required />
                 <br />
 
                 <div class="checkbox">
               <input id="remember" type="checkbox" name="remember" />
-              <label for="remember">Súhlasím so spracovaním údajov na účely kontaktovania</label>
+              <label for="remember">SĂşhlasĂ­m so spracovanĂ­m Ăşdajov na ĂşÄŤely kontaktovania</label>
                 </div>
 
                 <div class="action_btns">
-                  <div class="one_half"><a href="#" class="btn back_btn">&larr; Späť</a></div>
-            <div class="one_half last"><button type="submit" name="popup_login_submit" class="btn btn_red">Odoslať dopyt</button></div>
+                  <div class="one_half"><a href="#" class="btn back_btn">&larr; SpĂ¤ĹĄ</a></div>
+            <div class="one_half last"><button type="submit" name="popup_login_submit" class="btn btn_red">OdoslaĹĄ dopyt</button></div>
                 </div>
             </form>
 
-          <a href="#" class="forgot_password">Nemáte kód zákazky? Kontaktujte nás telefonicky.</a>
+          <a href="#" class="forgot_password">NemĂˇte kĂłd zĂˇkazky? Kontaktujte nĂˇs telefonicky.</a>
         </div>
 
         
@@ -204,7 +207,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input id="register_name" type="text" name="register_name" required />
                 <br />
 
-          <label for="register_contact">E-mailová adresa alebo telefón</label>
+          <label for="register_contact">E-mailovĂˇ adresa alebo telefĂłn</label>
             <input id="register_contact" type="text" name="register_contact" required />
                 <br />
 
@@ -214,14 +217,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 <div class="checkbox">
               <input id="send_updates" type="checkbox" name="send_updates" />
-              <label for="send_updates">Chcem dostávať informácie o stave opravy</label>
+              <label for="send_updates">Chcem dostĂˇvaĹĄ informĂˇcie o stave opravy</label>
                 </div>
 
                 <div class="action_btns">
-                  <div class="one_half"><a href="#" class="btn back_btn">&larr; Späť</a></div>
-            <div class="one_half last"><button type="submit" name="popup_register_submit" class="btn btn_red">Odoslať objednávku</button></div>
+                  <div class="one_half"><a href="#" class="btn back_btn">&larr; SpĂ¤ĹĄ</a></div>
+            <div class="one_half last"><button type="submit" name="popup_register_submit" class="btn btn_red">OdoslaĹĄ objednĂˇvku</button></div>
                 </div>
             </form>
         </div>
     </section>
 </div>
+

@@ -23,7 +23,7 @@ include __DIR__ . '/../header.php';
           <p>Tvrdene skla a folie, aj s nalepenim na pockanie.</p>
           <p><strong>Cena:</strong> od 7 EUR</p>
           <p><strong>Sluzba:</strong> odborna instalacia na pockanie</p>
-          <div class="gradient-button" style="margin-top: 12px;"><a href="<?php echo $basePath; ?>podstranky/objednat-servis.php">Rezervovat ochranne sklo</a></div>
+          <div class="gradient-button" style="margin-top: 12px;"><a href="https://www.alza.sk/prislusenstvo-pre-mobilne-telefony/18844551.htm">Rezervovat ochranne sklo</a></div>
         </div>
       </div>
       <div class="col-lg-6">
@@ -32,7 +32,7 @@ include __DIR__ . '/../header.php';
           <p>Bezne aj odolne kryty pre rozne modely.</p>
           <p><strong>Cena:</strong> od 9 EUR</p>
           <p><strong>Dostupnost:</strong> desiatky modelov skladom</p>
-          <div class="gradient-button" style="margin-top: 12px;"><a href="<?php echo $basePath; ?>podstranky/objednat-servis.php">Kupit kryt pre svoj model</a></div>
+          <div class="gradient-button" style="margin-top: 12px;"><a href="https://www.alza.sk/prislusenstvo-pre-mobilne-telefony/18844551.htm">Kupit kryt pre svoj model</a></div>
         </div>
       </div>
       <div class="col-lg-6">
@@ -41,7 +41,7 @@ include __DIR__ . '/../header.php';
           <p>Nabijacky, kable a bezkontaktne nabijanie.</p>
           <p><strong>Cena:</strong> od 6 EUR</p>
           <p><strong>Odporucanie:</strong> kompatibilita podla vykonu zariadenia</p>
-          <div class="gradient-button" style="margin-top: 12px;"><a href="<?php echo $basePath; ?>podstranky/objednat-servis.php">Objednat nabijanie a kable</a></div>
+          <div class="gradient-button" style="margin-top: 12px;"><a href="https://www.alza.sk/prislusenstvo-pre-mobilne-telefony/18844551.htm">Objednat nabijanie a kable</a></div>
         </div>
       </div>
       <div class="col-lg-6">
@@ -50,7 +50,7 @@ include __DIR__ . '/../header.php';
           <p>Sluchadla, drziaky do auta a stojany na stol.</p>
           <p><strong>Cena:</strong> od 12 EUR</p>
           <p><strong>Vhodne pre:</strong> pracu, sport aj bezne pouzivanie</p>
-          <div class="gradient-button" style="margin-top: 12px;"><a href="<?php echo $basePath; ?>podstranky/objednat-servis.php">Vybrat audio a drziaky</a></div>
+          <div class="gradient-button" style="margin-top: 12px;"><a href="https://www.alza.sk/prislusenstvo-pre-mobilne-telefony/18844551.htm">Vybrat audio a drziaky</a></div>
         </div>
       </div>
       <div class="col-lg-6">
@@ -59,7 +59,7 @@ include __DIR__ . '/../header.php';
           <p>Powerbanky a nabijacie doplnky pre cesty aj pracu.</p>
           <p><strong>Cena:</strong> od 19 EUR</p>
           <p><strong>Kapacity:</strong> 5 000 - 30 000 mAh</p>
-          <div class="gradient-button" style="margin-top: 12px;"><a href="<?php echo $basePath; ?>podstranky/objednat-servis.php">Objednat powerbanku</a></div>
+          <div class="gradient-button" style="margin-top: 12px;"><a href="https://www.alza.sk/prislusenstvo-pre-mobilne-telefony/18844551.htm">Objednat powerbanku</a></div>
         </div>
       </div>
       <div class="col-lg-6">
@@ -68,7 +68,7 @@ include __DIR__ . '/../header.php';
           <p>Remienky, cistiace sety a dalsie male doplnky.</p>
           <p><strong>Cena:</strong> od 5 EUR</p>
           <p><strong>Objednavka:</strong> aj pre menej bezne modely</p>
-          <div class="gradient-button" style="margin-top: 12px;"><a href="<?php echo $basePath; ?>podstranky/objednat-servis.php">Zadat dopyt na doplnky</a></div>
+          <div class="gradient-button" style="margin-top: 12px;"><a href="https://www.alza.sk/prislusenstvo-pre-mobilne-telefony/18844551.htm">Zadat dopyt na doplnky</a></div>
         </div>
       </div>
       <div class="col-lg-12">
