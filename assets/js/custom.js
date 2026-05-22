@@ -43,10 +43,67 @@
 });
 
 $(function() {
+    function openAccountModal(modalId) {
+        if (!$("#lean_overlay").length) {
+            $("body").append("<div id='lean_overlay'></div>");
+        }
+
+        $(".popupContainer").hide();
+        $("#lean_overlay").css({"display": "block", opacity: 0}).fadeTo(200, 0.6);
+
+        var modal = $(modalId);
+        var modalWidth = modal.outerWidth();
+
+        modal.css({
+            "display": "block",
+            "position": "fixed",
+            "opacity": 0,
+            "z-index": 11000,
+            "left": "50%",
+            "margin-left": -(modalWidth / 2) + "px",
+            "top": "100px"
+        }).fadeTo(200, 1);
+    }
+
+    function closeAccountModals() {
+        $("#lean_overlay").fadeOut(200);
+        $("#account_login_modal, #account_register_modal").hide();
+    }
+
+    $("#modal_trigger").click(function() {
+        $(".user_login").hide();
+        $(".user_register").hide();
+        $(".social_login").show();
+        $(".header_title").text('Rýchly kontakt');
+    });
+
+    $("#account_modal_trigger").click(function(event) {
+        event.preventDefault();
+        openAccountModal("#account_login_modal");
+    });
+
+    $("#switch_to_account_register").click(function(event) {
+        event.preventDefault();
+        openAccountModal("#account_register_modal");
+    });
+
+    $(document).on("click", "#account_login_modal .modal_close, #account_register_modal .modal_close", function() {
+        closeAccountModals();
+    });
+
+    $(document).on("click", "#lean_overlay", function() {
+        closeAccountModals();
+    });
+
+    $(".account-google-login").click(function() {
+        return false;
+    });
+
 		// Calling Login Form
 		$("#login_form").click(function() {
 				$(".social_login").hide();
 				$(".user_login").show();
+        $(".header_title").text('Login / registrácia');
 				return false;
 		});
 
@@ -140,7 +197,7 @@ $(function() {
       });
   });
 
-  function onScroll(event){
+	function onScroll(event){
       var scrollPos = $(document).scrollTop();
       $('.nav a').each(function () {
           var currLink = $(this);
@@ -154,6 +211,22 @@ $(function() {
           }
       });
   }
+
+  window.initServiceTypeOptions = function() {
+    document.querySelectorAll('.service-radio').forEach(function(radio) {
+      radio.addEventListener('change', function() {
+        document.querySelectorAll('.service-option-box').forEach(function(box) {
+          box.style.borderColor = '#ddd';
+          box.style.backgroundColor = 'transparent';
+        });
+
+        if (this.checked) {
+          this.nextElementSibling.style.borderColor = '#4b8ef1';
+          this.nextElementSibling.style.backgroundColor = 'rgba(75, 142, 241, 0.05)';
+        }
+      });
+    });
+  };
 
 
   // Acc

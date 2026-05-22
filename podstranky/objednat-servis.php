@@ -1,7 +1,9 @@
 <?php
-$basePath = '../';
-$isSubpage = true;
-include __DIR__ . '/../header.php';
+require_once __DIR__ . '/../app/StaticPage.php';
+
+(new StaticPage('../', true))->render(function (PageData $page): void {
+  $basePath = $page->basePath();
+  $serviceOrderData = $page->serviceOrderData();
 ?>
 
 <div class="subpage-content">
@@ -20,24 +22,13 @@ include __DIR__ . '/../header.php';
       <div class="col-lg-8 offset-lg-2">
         <?php if (!empty($serviceOrderData)): ?>
           <div class="alert alert-success" style="margin-bottom: 24px; border-radius: 16px;">
-            <strong>Objednávka prijatá.</strong> Údaje z formulára:
-            <div>Meno: <?php echo htmlspecialchars($serviceOrderData['meno'], ENT_QUOTES, 'UTF-8'); ?></div>
-            <div>Kontakt: <?php echo htmlspecialchars($serviceOrderData['kontakt'], ENT_QUOTES, 'UTF-8'); ?></div>
-            <div>Zariadenie: <?php echo htmlspecialchars($serviceOrderData['zariadenie'], ENT_QUOTES, 'UTF-8'); ?></div>
-            <div>Popis: <?php echo htmlspecialchars($serviceOrderData['popis'], ENT_QUOTES, 'UTF-8'); ?></div>
-            <?php if (!empty($serviceOrderData['service_type'])): ?>
-              <div>Typ servisu: 
-                <?php 
-                  $serviceTypeLabel = [
-                    'express' => 'Express servis',
-                    'standard' => 'Standard servis',
-                    'diagnostika' => 'Diagnostika bez zavazku'
-                  ];
-                  $type = $serviceOrderData['service_type'];
-                  echo isset($serviceTypeLabel[$type]) ? htmlspecialchars($serviceTypeLabel[$type], ENT_QUOTES, 'UTF-8') : htmlspecialchars($type, ENT_QUOTES, 'UTF-8');
-                ?>
-              </div>
-            <?php endif; ?>
+            <strong>Objednávka prijatá.</strong>
+            <div>ID objednávky: <?php echo View::e((string) ($serviceOrderData['id'] ?? '')); ?></div>
+            <div>Meno a priezvisko: <?php echo View::e($serviceOrderData['meno']); ?></div>
+            <div>Telefon alebo e-mail: <?php echo View::e($serviceOrderData['kontakt']); ?></div>
+            <div>Typ zariadenia: <?php echo View::e($serviceOrderData['zariadenie']); ?></div>
+            <div>Popis poruchy: <?php echo View::e($serviceOrderData['popis']); ?></div>
+            <div>Zvolený typ servisu: <?php echo View::e(FormHandler::serviceTypeLabel($serviceOrderData['service_type'])); ?></div>
           </div>
         <?php endif; ?>
 
@@ -73,17 +64,8 @@ include __DIR__ . '/../header.php';
               </div>
             </div>
             <script>
-              document.querySelectorAll('.service-radio').forEach(radio => {
-                radio.addEventListener('change', function() {
-                  document.querySelectorAll('.service-option-box').forEach(box => {
-                    box.style.borderColor = '#ddd';
-                    box.style.backgroundColor = 'transparent';
-                  });
-                  if (this.checked) {
-                    this.nextElementSibling.style.borderColor = '#4b8ef1';
-                    this.nextElementSibling.style.backgroundColor = 'rgba(75, 142, 241, 0.05)';
-                  }
-                });
+              window.addEventListener('DOMContentLoaded', function() {
+                window.initServiceTypeOptions();
               });
             </script>
             <div class="col-lg-6">
@@ -134,4 +116,6 @@ include __DIR__ . '/../header.php';
   </div>
 </div>
 
-<?php include __DIR__ . '/../footer.php'; ?>
+<?php
+});
+?>

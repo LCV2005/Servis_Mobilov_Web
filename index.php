@@ -1,4 +1,8 @@
-<?php require_once 'header.php'; ?>
+<?php
+require_once __DIR__ . '/app/StaticPage.php';
+
+(new StaticPage())->render(function (): void {
+?>
 
   
   <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
@@ -18,7 +22,7 @@
                       <a href="#naradie">Pozrieť cenník <i class="fa fa-tags"></i></a>
                     </div>
                     <div class="white-button scroll-to-section">
-                      <a href="#newsletter">Objednať servis <i class="fa fa-tools"></i></a>
+                      <a href="podstranky/objednat-servis.php">Objednať servis <i class="fa fa-tools"></i></a>
                     </div>
                   </div>
                 </div>
@@ -131,7 +135,7 @@
             <div class="col-lg-12">
               <p>Každé zariadenie opravujeme tak, aby ste sa k nemu mohli vrátiť čo najskôr a bez ďalších komplikácií.</p>
               <div class="gradient-button">
-                <a href="#newsletter">Objednať diagnostiku</a>
+                <a href="podstranky/objednat-servis.php">Objednať diagnostiku</a>
               </div>
               <span>*Úvodná diagnostika bez záväzku opravy</span>
             </div>
@@ -460,4 +464,6 @@
     </div>
   </div>
 
-<?php include_once 'footer.php'; ?>
+<?php
+});
+?>

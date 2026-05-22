@@ -2433,6 +2433,64 @@ a.btn_red {
   color: #666;
 }
 
+.account_login_form label,
+.account_register_form label {
+  color: #000;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.account_login_form input[type="text"],
+.account_login_form input[type="email"],
+.account_login_form input[type="password"],
+.account_register_form input[type="text"],
+.account_register_form input[type="email"],
+.account_register_form input[type="password"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #DDD;
+  color: #666;
+}
+
+.account_login_form .social_box {
+  display: block;
+  clear: both;
+  padding: 10px;
+  margin-bottom: 18px;
+  background: #F4F4F2;
+  overflow: hidden;
+}
+
+.account_login_form .social_box .icon {
+  padding: 5px 10px;
+  margin-right: 10px;
+  float: left;
+  color: #FFF;
+  font-size: 16px;
+  text-align: center;
+  background: #DD4B39;
+}
+
+.account_login_form .social_box .icon_title {
+  display: block;
+  padding: 5px 0;
+  float: left;
+  font-weight: bold;
+  font-size: 16px;
+  color: #777;
+}
+
+.account-actions {
+  margin-top: 4px;
+}
+
+.account-actions button.btn,
+.account-submit {
+  border: none;
+  width: 100%;
+}
+
 .user_register input[type="checkbox"] {
   width: 22px;
   height: 22px;
