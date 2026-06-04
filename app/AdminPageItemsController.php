@@ -92,21 +92,21 @@ class AdminPageItemsController
 
       if ($this->auth->isAdmin() && isset($post['item_create_submit'])) {
         $this->items->create($post);
-        $this->message = 'Polozka bola pridana.';
+        $this->message = 'Položka bola pridaná.';
       }
 
       if ($this->auth->isAdmin() && isset($post['item_update_submit'])) {
         $this->items->update((int) ($post['id'] ?? 0), $post);
-        $this->message = 'Polozka bola upravena.';
+        $this->message = 'Položka bola upravená.';
       }
 
       if ($this->auth->isAdmin() && isset($post['item_delete_submit'])) {
         $this->items->delete((int) ($post['id'] ?? 0));
-        $this->message = 'Polozka bola vymazana.';
+        $this->message = 'Položka bola vymazaná.';
       }
 
       if (!$this->auth->isAdmin() && $this->containsCrudSubmit($post)) {
-        $this->error = 'CRUD operacie moze vykonavat iba admin.';
+        $this->error = 'CRUD operácie môže vykonávať iba admin.';
       }
     } catch (RuntimeException $exception) {
       $this->error = $exception->getMessage();
@@ -126,11 +126,11 @@ class AdminPageItemsController
         exit;
       }
 
-      $this->message = 'Admin prihlasenie prebehlo uspesne.';
+      $this->message = 'Admin prihlásenie prebehlo úspešne.';
       return;
     }
 
-    $this->error = 'Nespravny e-mail alebo heslo.';
+    $this->error = 'Nesprávny e-mail alebo heslo.';
   }
 
   private function containsCrudSubmit(array $post): bool

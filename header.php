@@ -84,7 +84,7 @@ $popupRegisterData = $formHandler->popupRegisterData();
                 <li><a href="<?php echo View::e($basePath); ?>podstranky/produkty.php" class="<?php echo View::e($pageContext->activeClass('produkty.php')); ?>" style="<?php echo View::e($pageContext->activeStyle('produkty.php')); ?>">Produkty</a></li>
               <?php endif; ?>
             </ul>        
-            <div class="header-icons" aria-label="Rychly pristup">
+            <div class="header-icons" aria-label="Rýchly prístup">
               <a href="#modal" id="modal_trigger" class="header-icon" title="Rýchly kontakt" aria-label="Rýchly kontakt">
                 <span class="header-icon-glyph" aria-hidden="true">Rýchly kontakt</span>
               </a>

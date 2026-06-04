@@ -412,7 +412,7 @@ require_once __DIR__ . '/app/StaticPage.php';
               <li>Čistenie a základný servis</li>
               <li>Optimalizácia systému</li>
               <li class="non-function">Výmena displeja</li>
-              <li class="non-function">Mikropájkovanie dosky</li>
+              <li class="non-function">Mikropäťjkovanie dosky</li>
               <li class="non-function">Prednostný termín</li>
             </ul>
             <div class="border-button">
@@ -432,7 +432,7 @@ require_once __DIR__ . '/app/StaticPage.php';
               <li>Výmena batérie alebo konektora</li>
               <li>Prenastavenie a aktualizácia systému</li>
               <li>Záloha dát pred opravou</li>
-              <li class="non-function">Mikropájkovanie dosky</li>
+              <li class="non-function">Mikropäťjkovanie dosky</li>
               <li class="non-function">Expresné vybavenie do 2 hodín</li>
             </ul>
             <div class="border-button">

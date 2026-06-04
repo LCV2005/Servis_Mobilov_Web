@@ -44,7 +44,7 @@ class FormHandler
       $this->popupLoginData = [
         'kontakt' => $this->clean($post['login_contact'] ?? ''),
         'kod' => $this->clean($post['login_code'] ?? ''),
-        'remember' => isset($post['remember']) ? 'ano' : 'nie',
+        'remember' => isset($post['remember']) ? 'áno' : 'nie',
       ];
     }
 
@@ -53,7 +53,7 @@ class FormHandler
         'meno' => $this->clean($post['register_name'] ?? ''),
         'kontakt' => $this->clean($post['register_contact'] ?? ''),
         'zariadenie' => $this->clean($post['register_device'] ?? ''),
-        'updates' => isset($post['send_updates']) ? 'ano' : 'nie',
+        'updates' => isset($post['send_updates']) ? 'áno' : 'nie',
       ];
     }
 
@@ -84,7 +84,7 @@ class FormHandler
     $labels = [
       'express' => 'Express servis',
       'standard' => 'Standard servis',
-      'diagnostika' => 'Diagnostika bez zavazku',
+      'diagnostika' => 'Diagnostika bez záväzku',
     ];
 
     return $labels[$type] ?? $type;

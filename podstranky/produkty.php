@@ -22,9 +22,9 @@ $controller = new AdminPageItemsController(AuthService::default(), PageItemRepos
     <div class="row">
       <div class="col-lg-8 offset-lg-2">
         <div class="section-heading text-center">
-          <h4>CRUD sprava <em>obsahu podstranok</em></h4>
+          <h4>CRUD správa <em>obsahu podstránok</em></h4>
           <img src="<?php echo View::e($basePath); ?>assets/images/heading-line-dec.png" alt="">
-          <p>Vyberte podstranku a upravujte iba karty, ktore patria do tejto konkretnej podstranky.</p>
+          <p>Vyberte podstránku a upravujte iba karty, ktoré patria do tejto konkrétnej podstránky.</p>
         </div>
       </div>
     </div>
@@ -39,18 +39,18 @@ $controller = new AdminPageItemsController(AuthService::default(), PageItemRepos
 
     <?php if (!$isAdmin): ?>
       <div class="service-item" style="margin-bottom: 24px;">
-        <h4>Pre spravu obsahu sa prihlaste do admin uctu</h4>
-        <p>CRUD operacie su dostupne iba pre admina. Prihlasovacie udaje: ADMIN0@gmail.com / 123456.</p>
+        <h4>Pre správu obsahu sa prihláste do admin účtu</h4>
+        <p>CRUD operácie sú dostupné iba pre admina. Prihlasovacie údaje: ADMIN0@gmail.com / 123456.</p>
       </div>
     <?php else: ?>
       <div class="service-item" style="margin-bottom: 24px;">
-        <h4>Prihlaseny admin</h4>
+        <h4>Prihlásený admin</h4>
         <p><?php echo View::e($user['meno']); ?>, <?php echo View::e($user['email']); ?></p>
       </div>
 
       <form action="<?php echo View::e($basePath); ?>podstranky/produkty.php" method="GET" class="service-order-card" style="margin-bottom: 24px;">
         <fieldset>
-          <label for="page-picker">Vyberte podstranku</label>
+          <label for="page-picker">Vyberte podstránku</label>
           <select id="page-picker" name="page" class="form-control" onchange="this.form.submit()">
             <?php foreach ($items->pages() as $pageKey => $pageLabel): ?>
               <option value="<?php echo View::e($pageKey); ?>" <?php echo $selectedPage === $pageKey ? 'selected' : ''; ?>>
@@ -80,8 +80,8 @@ $controller = new AdminPageItemsController(AuthService::default(), PageItemRepos
             </fieldset>
 
             <fieldset>
-              <label for="detail1_label">Detail 1 nazov</label>
-              <input id="detail1_label" type="text" name="detail1_label" value="<?php echo View::e($editingItem['detail1_label'] ?? ''); ?>" placeholder="Cena / Orientacna cena">
+              <label for="detail1_label">Detail 1 názov</label>
+              <input id="detail1_label" type="text" name="detail1_label" value="<?php echo View::e($editingItem['detail1_label'] ?? ''); ?>" placeholder="Cena / Orientačná cena">
             </fieldset>
 
             <fieldset>
@@ -90,17 +90,17 @@ $controller = new AdminPageItemsController(AuthService::default(), PageItemRepos
             </fieldset>
 
             <fieldset>
-              <label for="detail2_label">Detail 2 nazov</label>
-              <input id="detail2_label" type="text" name="detail2_label" value="<?php echo View::e($editingItem['detail2_label'] ?? ''); ?>" placeholder="Cas opravy / Dostupnost">
+              <label for="detail2_label">Detail 2 názov</label>
+              <input id="detail2_label" type="text" name="detail2_label" value="<?php echo View::e($editingItem['detail2_label'] ?? ''); ?>" placeholder="Čas opravy / Dostupnosť">
             </fieldset>
 
             <fieldset>
               <label for="detail2_value">Detail 2 hodnota</label>
-              <input id="detail2_value" type="text" name="detail2_value" value="<?php echo View::e($editingItem['detail2_value'] ?? ''); ?>" placeholder="60 - 180 minut">
+              <input id="detail2_value" type="text" name="detail2_value" value="<?php echo View::e($editingItem['detail2_value'] ?? ''); ?>" placeholder="60 - 180 minút">
             </fieldset>
 
             <fieldset>
-              <label for="detail3_label">Detail 3 nazov</label>
+              <label for="detail3_label">Detail 3 názov</label>
               <input id="detail3_label" type="text" name="detail3_label" value="<?php echo View::e($editingItem['detail3_label'] ?? ''); ?>">
             </fieldset>
 
@@ -110,17 +110,17 @@ $controller = new AdminPageItemsController(AuthService::default(), PageItemRepos
             </fieldset>
 
             <fieldset>
-              <label for="button_text">Text tlacidla</label>
+              <label for="button_text">Text tlačidla</label>
               <input id="button_text" type="text" name="button_text" value="<?php echo View::e($editingItem['button_text'] ?? ''); ?>">
             </fieldset>
 
             <fieldset>
-              <label for="button_href">Odkaz tlacidla</label>
+              <label for="button_href">Odkaz tlačidla</label>
               <input id="button_href" type="text" name="button_href" value="<?php echo View::e($editingItem['button_href'] ?? ''); ?>">
             </fieldset>
 
             <fieldset>
-              <label for="column_class">Bootstrap sirka karty</label>
+              <label for="column_class">Bootstrap šírka karty</label>
               <input id="column_class" type="text" name="column_class" value="<?php echo View::e($editingItem['column_class'] ?? 'col-lg-6'); ?>">
             </fieldset>
 
@@ -131,10 +131,10 @@ $controller = new AdminPageItemsController(AuthService::default(), PageItemRepos
 
             <div class="service-order-actions text-center">
               <?php if ($editingItem !== null): ?>
-                <button type="submit" name="item_update_submit" class="main-button">Upravit polozku <i class="fa fa-angle-right"></i></button>
-                <a href="<?php echo View::e($basePath); ?>podstranky/produkty.php?page=<?php echo View::e($selectedPage); ?>" class="btn" style="margin-top: 12px;">Zrusit upravu</a>
+                <button type="submit" name="item_update_submit" class="main-button">Upraviť položku <i class="fa fa-angle-right"></i></button>
+                <a href="<?php echo View::e($basePath); ?>podstranky/produkty.php?page=<?php echo View::e($selectedPage); ?>" class="btn" style="margin-top: 12px;">Zrušiť úpravu</a>
               <?php else: ?>
-                <button type="submit" name="item_create_submit" class="main-button">Pridat polozku <i class="fa fa-angle-right"></i></button>
+                <button type="submit" name="item_create_submit" class="main-button">Pridať položku <i class="fa fa-angle-right"></i></button>
               <?php endif; ?>
             </div>
           </form>
@@ -142,9 +142,9 @@ $controller = new AdminPageItemsController(AuthService::default(), PageItemRepos
 
         <div class="col-lg-7">
           <div class="service-item" style="margin-bottom: 24px;">
-            <h4>Polozky: <?php echo View::e($items->pages()[$selectedPage]); ?></h4>
+            <h4>Položky: <?php echo View::e($items->pages()[$selectedPage]); ?></h4>
             <?php if (empty($pageItems)): ?>
-              <p>Pre tuto podstranku este nie su pridane ziadne polozky.</p>
+              <p>Pre túto podstránku ešte nie sú pridané žiadne položky.</p>
             <?php else: ?>
               <div class="table-responsive">
                 <table class="table table-striped">
@@ -163,11 +163,11 @@ $controller = new AdminPageItemsController(AuthService::default(), PageItemRepos
                         <td><?php echo View::e(($item['detail1_label'] ? $item['detail1_label'] . ': ' : '') . $item['detail1_value']); ?></td>
                         <td><?php echo View::e(($item['detail2_label'] ? $item['detail2_label'] . ': ' : '') . $item['detail2_value']); ?></td>
                         <td>
-                          <a href="<?php echo View::e($basePath); ?>podstranky/produkty.php?page=<?php echo View::e($selectedPage); ?>&edit=<?php echo View::e((string) $item['id']); ?>" class="btn">Upravit</a>
+                          <a href="<?php echo View::e($basePath); ?>podstranky/produkty.php?page=<?php echo View::e($selectedPage); ?>&edit=<?php echo View::e((string) $item['id']); ?>" class="btn">Upraviť</a>
                           <form action="<?php echo View::e($basePath); ?>podstranky/produkty.php" method="POST" style="display:inline;">
                             <input type="hidden" name="page" value="<?php echo View::e($selectedPage); ?>">
                             <input type="hidden" name="id" value="<?php echo View::e((string) $item['id']); ?>">
-                            <button type="submit" name="item_delete_submit" class="btn btn_red">Vymazat</button>
+                            <button type="submit" name="item_delete_submit" class="btn btn_red">Vymazať</button>
                           </form>
                         </td>
                       </tr>

@@ -5,6 +5,6 @@ require_once __DIR__ . '/../app/DynamicContentPage.php';
   'opravy-servis',
   'subpage-content',
   'Opravy a',
-  'servis zariadeni',
-  'Rychly servis mobilov, tabletov a smart zariadeni.'
+  'servis zariadení',
+  'Rýchly servis mobilov, tabletov a smart zariadení.'
 ))->render();
