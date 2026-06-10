@@ -27,6 +27,9 @@ class UserRepository
 
   public function create(string $name, string $phone, string $email, string $password): array
   {
+    $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+    $createdAt = date('Y-m-d H:i:s');
+
     $statement = $this->db->prepare(
       'INSERT INTO users (meno, telefon, email, password_hash, created_at)
        VALUES (:meno, :telefon, :email, :password_hash, :created_at)'
@@ -36,10 +39,17 @@ class UserRepository
       'meno' => $name,
       'telefon' => $phone,
       'email' => $email,
-      'password_hash' => password_hash($password, PASSWORD_DEFAULT),
-      'created_at' => date('Y-m-d H:i:s'),
+      'password_hash' => $passwordHash,
+      'created_at' => $createdAt,
     ]);
 
-    return $this->findByEmail($email);
+    return $this->findByEmail($email) ?? [
+      'id' => (int) $this->db->lastInsertId(),
+      'meno' => $name,
+      'telefon' => $phone,
+      'email' => $email,
+      'password_hash' => $passwordHash,
+      'created_at' => $createdAt,
+    ];
   }
 }

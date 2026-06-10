@@ -10,7 +10,7 @@ class PageContext
   {
     $this->basePath = $basePath;
     $this->subpage = $subpage;
-    $this->currentPage = $currentPage ?? basename($_SERVER['PHP_SELF']);
+    $this->currentPage = $currentPage ?? basename($_SERVER['PHP_SELF'] ?? 'index.php');
   }
 
   public function basePath(): string

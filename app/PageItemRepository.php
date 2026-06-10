@@ -4,20 +4,24 @@ require_once __DIR__ . '/Database.php';
 
 class PageItemRepository
 {
-  private PDO $db;
+  private ?PDO $db;
 
-  public function __construct(PDO $db)
+  public function __construct(?PDO $db)
   {
     $this->db = $db;
 
-    if (empty($this->all())) {
+    if ($this->db !== null && empty($this->all())) {
       $this->seedDefaults();
     }
   }
 
   public static function default(): self
   {
-    return new self(Database::connection());
+    try {
+      return new self(Database::connection());
+    } catch (Throwable $exception) {
+      return new self(null);
+    }
   }
 
   public function pages(): array
@@ -32,12 +36,20 @@ class PageItemRepository
 
   public function all(): array
   {
-    return $this->db->query('SELECT * FROM page_items ORDER BY id ASC')->fetchAll();
+    if ($this->db === null) {
+      return $this->defaults();
+    }
+
+    return $this->db()->query('SELECT * FROM page_items ORDER BY id ASC')->fetchAll();
   }
 
   public function byPage(string $page): array
   {
-    $statement = $this->db->prepare('SELECT * FROM page_items WHERE page = :page ORDER BY id ASC');
+    if ($this->db === null) {
+      return array_values(array_filter($this->defaults(), fn (array $item): bool => $item['page'] === $page));
+    }
+
+    $statement = $this->db()->prepare('SELECT * FROM page_items WHERE page = :page ORDER BY id ASC');
     $statement->execute(['page' => $page]);
 
     return $statement->fetchAll();
@@ -45,7 +57,17 @@ class PageItemRepository
 
   public function find(int $id): ?array
   {
-    $statement = $this->db->prepare('SELECT * FROM page_items WHERE id = :id LIMIT 1');
+    if ($this->db === null) {
+      foreach ($this->defaults() as $item) {
+        if ((int) $item['id'] === $id) {
+          return $item;
+        }
+      }
+
+      return null;
+    }
+
+    $statement = $this->db()->prepare('SELECT * FROM page_items WHERE id = :id LIMIT 1');
     $statement->execute(['id' => $id]);
     $item = $statement->fetch();
 
@@ -54,16 +76,20 @@ class PageItemRepository
 
   public function create(array $data): void
   {
+    $this->requireDatabase();
+
     $item = $this->fromPost($data);
     $this->insert($item, false);
   }
 
   public function update(int $id, array $data): void
   {
+    $this->requireDatabase();
+
     $item = $this->fromPost($data);
     $item['id'] = $id;
 
-    $statement = $this->db->prepare(
+    $statement = $this->db()->prepare(
       'UPDATE page_items SET
         page = :page,
         column_class = :column_class,
@@ -86,7 +112,9 @@ class PageItemRepository
 
   public function delete(int $id): void
   {
-    $statement = $this->db->prepare('DELETE FROM page_items WHERE id = :id');
+    $this->requireDatabase();
+
+    $statement = $this->db()->prepare('DELETE FROM page_items WHERE id = :id');
     $statement->execute(['id' => $id]);
   }
 
@@ -137,12 +165,26 @@ class PageItemRepository
       array_unshift($columns, 'id');
     }
 
-    $statement = $this->db->prepare(
+    $statement = $this->db()->prepare(
       'INSERT INTO page_items (' . implode(', ', $columns) . ')
        VALUES (:' . implode(', :', $columns) . ')'
     );
 
     $statement->execute(array_intersect_key($item, array_flip($columns)));
+  }
+
+  private function db(): PDO
+  {
+    if ($this->db === null) {
+      throw new RuntimeException('DatabĂˇza momentĂˇlne nie je dostupnĂˇ.');
+    }
+
+    return $this->db;
+  }
+
+  private function requireDatabase(): void
+  {
+    $this->db();
   }
 
   private function seedDefaults(): void

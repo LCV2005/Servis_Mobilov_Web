@@ -2,6 +2,7 @@
 require_once __DIR__ . '/app/View.php';
 
 $basePath = $basePath ?? '';
+$newsletterEmail = $newsletterEmail ?? null;
 ?>
   <footer id="newsletter">
     <div class="container">

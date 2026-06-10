@@ -40,7 +40,7 @@ $controller = new AdminPageItemsController(AuthService::default(), PageItemRepos
     <?php if (!$isAdmin): ?>
       <div class="service-item" style="margin-bottom: 24px;">
         <h4>Pre správu obsahu sa prihláste do admin účtu</h4>
-        <p>CRUD operácie sú dostupné iba pre admina. Prihlasovacie údaje: ADMIN0@gmail.com / 123456.</p>
+        <p>CRUD operácie sú dostupné iba pre admina.</p>
       </div>
     <?php else: ?>
       <div class="service-item" style="margin-bottom: 24px;">

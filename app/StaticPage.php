@@ -17,6 +17,8 @@ class StaticPage
   {
     $basePath = $this->basePath;
     $isSubpage = $this->subpage;
+    $serviceOrderData = null;
+    $newsletterEmail = null;
 
     include __DIR__ . '/../header.php';
 

@@ -8,12 +8,10 @@ class FormHandler
   private ?string $newsletterEmail = null;
   private ?array $popupLoginData = null;
   private ?array $popupRegisterData = null;
-  private ServiceOrderRepository $serviceOrderRepository;
+  private ?ServiceOrderRepository $serviceOrderRepository = null;
 
   public function __construct(array $server, array $post)
   {
-    $this->serviceOrderRepository = ServiceOrderRepository::default();
-
     if (($server['REQUEST_METHOD'] ?? '') !== 'POST') {
       return;
     }
@@ -26,7 +24,7 @@ class FormHandler
       $serviceType = $this->clean($post['service_type'] ?? '');
 
       if ($name !== '' && $contact !== '' && $device !== '' && $description !== '' && $serviceType !== '') {
-        $this->serviceOrderData = $this->serviceOrderRepository->create(
+        $this->serviceOrderData = $this->serviceOrderRepository()->create(
           $name,
           $contact,
           $device,
@@ -93,5 +91,14 @@ class FormHandler
   private function clean(string $value): string
   {
     return trim($value);
+  }
+
+  private function serviceOrderRepository(): ServiceOrderRepository
+  {
+    if ($this->serviceOrderRepository === null) {
+      $this->serviceOrderRepository = ServiceOrderRepository::default();
+    }
+
+    return $this->serviceOrderRepository;
   }
 }
