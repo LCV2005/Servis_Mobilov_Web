@@ -99,7 +99,7 @@ class AuthService
       try {
         $this->users = UserRepository::default();
       } catch (Throwable $exception) {
-        throw new RuntimeException('DatabĂˇza momentĂˇlne nie je dostupnĂˇ.');
+        throw new RuntimeException('Databaza momentalne nie je dostupna.');
       }
     }
 
