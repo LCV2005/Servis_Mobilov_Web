@@ -176,7 +176,7 @@ class PageItemRepository
   private function db(): PDO
   {
     if ($this->db === null) {
-      throw new RuntimeException('DatabĂˇza momentĂˇlne nie je dostupnĂˇ.');
+      throw new RuntimeException('Databaza momentalne nie je dostupna.');
     }
 
     return $this->db;
