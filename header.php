@@ -1,3 +1,25 @@
+<?php
+header('Content-Type: text/html; charset=utf-8');
+require_once __DIR__ . '/app/PageContext.php';
+require_once __DIR__ . '/app/FormHandler.php';
+require_once __DIR__ . '/app/AuthService.php';
+require_once __DIR__ . '/app/View.php';
+
+$pageContext = new PageContext($basePath ?? '', $isSubpage ?? false);
+$formHandler = new FormHandler($_SERVER, $_POST);
+$authService = AuthService::default();
+$loggedInUser = $authService->user();
+$isAdminUser = $authService->isAdmin();
+
+$currentPage = $pageContext->currentPage();
+$basePath = $pageContext->basePath();
+$isSubpage = $pageContext->isSubpage();
+$activeNavColor = 'color:#4b8ef1!important;';
+$serviceOrderData = $formHandler->serviceOrderData();
+$newsletterEmail = $formHandler->newsletterEmail();
+$popupLoginData = $formHandler->popupLoginData();
+$popupRegisterData = $formHandler->popupRegisterData();
+?>
 <!DOCTYPE html>
 <html lang="sk">
 
@@ -5,29 +27,29 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Servis Mobilov - rýchle opravy mobilných telefónov, diagnostika a výmena displejov.">
+    <meta name="author" content="Servis Mobilov">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
-    <title>Chain App Dev - HTML5 šablóna vstupnej stránky aplikácie</title>
+    <title>Servis Mobilov | Rýchly a spoľahlivý servis telefónov</title>
 
-    <!-- Základné CSS Bootstrapu -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="<?php echo View::e($basePath); ?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
-    <!-- Dodatočné CSS súbory -->
+    
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1W4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/templatemo-chain-app-dev.css">
-    <link rel="stylesheet" href="assets/css/animated.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="<?php echo View::e($basePath); ?>assets/css/templatemo-chain-app-dev.css">
+    <link rel="stylesheet" href="<?php echo View::e($basePath); ?>assets/css/animated.css">
+    <link rel="stylesheet" href="<?php echo View::e($basePath); ?>assets/css/owl.css">
 
   </head>
 
-<body>
+<body class="<?php echo View::e($pageContext->bodyClass()); ?>">
 
-  <!-- ***** Začiatok prednačítania ***** -->
+  
   <div id="js-preloader" class="js-preloader">
     <div class="preloader-inner">
       <span class="dot"></span>
@@ -38,121 +60,224 @@
       </div>
     </div>
   </div>
-  <!-- ***** Koniec prednačítania ***** -->
+  
 
-  <!-- ***** Začiatok oblasti hlavičky ***** -->
+  
   <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
     <div class="container">
       <div class="row">
         <div class="col-12">
           <nav class="main-nav">
-            <!-- ***** Začiatok loga ***** -->
-            <a href="index.html" class="logo">
-              <img src="assets/images/logo.png" alt="Chain App Dev">
+            
+            <a href="<?php echo View::e($basePath); ?>index.php" class="logo">
+              <img src="<?php echo View::e($basePath); ?>assets/images/logo.png" alt="Servis Mobilov">
             </a>
-            <!-- ***** Koniec loga ***** -->
-            <!-- ***** Začiatok menu ***** -->
+            
+            
             <ul class="nav">
-              <li class="scroll-to-section"><a href="#top" class="active">Domov</a></li>
-              <li class="scroll-to-section"><a href="#services">Služby</a></li>
-              <li class="scroll-to-section"><a href="#about">O nás</a></li>
-              <li class="scroll-to-section"><a href="#pricing">Cenník</a></li>
-              <li class="scroll-to-section"><a href="#newsletter">Novinky</a></li>
-              <li><div class="gradient-button"><a id="modal_trigger" href="#modal"><i class="fa fa-sign-in-alt"></i> Prihlásiť sa</a></div></li> 
+              <li><a href="<?php echo View::e($basePath); ?>index.php" class="<?php echo View::e($pageContext->activeClass('index.php')); ?>" style="<?php echo View::e($pageContext->activeStyle('index.php')); ?>">Domov</a></li>
+              <li><a href="<?php echo View::e($basePath); ?>podstranky/opravy-servis.php" class="<?php echo View::e($pageContext->activeClass('opravy-servis.php')); ?>" style="<?php echo View::e($pageContext->activeStyle('opravy-servis.php')); ?>">Opravy a servis</a></li>
+              <li><a href="<?php echo View::e($basePath); ?>podstranky/nahradne-diely.php" class="<?php echo View::e($pageContext->activeClass('nahradne-diely.php')); ?>" style="<?php echo View::e($pageContext->activeStyle('nahradne-diely.php')); ?>">Náhradné diely</a></li>
+              <li><a href="<?php echo View::e($basePath); ?>podstranky/naradie.php" class="<?php echo View::e($pageContext->activeClass('naradie.php')); ?>" style="<?php echo View::e($pageContext->activeStyle('naradie.php')); ?>">Náradie</a></li>
+              <li><a href="<?php echo View::e($basePath); ?>podstranky/prislusenstvo.php" class="<?php echo View::e($pageContext->activeClass('prislusenstvo.php')); ?>" style="<?php echo View::e($pageContext->activeStyle('prislusenstvo.php')); ?>">Príslušenstvo</a></li>
+              <?php if ($isAdminUser): ?>
+                <li><a href="<?php echo View::e($basePath); ?>podstranky/produkty.php" class="<?php echo View::e($pageContext->activeClass('produkty.php')); ?>" style="<?php echo View::e($pageContext->activeStyle('produkty.php')); ?>">Produkty</a></li>
+              <?php endif; ?>
             </ul>        
+            <div class="header-icons" aria-label="Rýchly prístup">
+              <a href="#modal" id="modal_trigger" class="header-icon" title="Rýchly kontakt" aria-label="Rýchly kontakt">
+                <span class="header-icon-glyph" aria-hidden="true">Rýchly kontakt</span>
+              </a>
+              <?php if ($loggedInUser === null): ?>
+                <a href="#account_login_modal" id="account_modal_trigger" class="header-icon" title="Login / registrácia" aria-label="Login / registrácia">
+                  <span class="header-icon-glyph" aria-hidden="true">Register/Login</span>
+                </a>
+              <?php else: ?>
+                <a href="<?php echo View::e($basePath); ?>podstranky/produkty.php?action=logout" class="header-icon" title="Odhlásiť sa" aria-label="Odhlásiť sa">
+                  <span class="header-icon-glyph" aria-hidden="true">Odhlásiť</span>
+                </a>
+              <?php endif; ?>
+            </div>
             <a class='menu-trigger'>
                 <span>Menu</span>
             </a>
-            <!-- ***** Koniec menu ***** -->
+            
           </nav>
         </div>
       </div>
     </div>
   </header>
-  <!-- ***** Koniec oblasti hlavičky ***** -->
   
+
+  <?php if (!empty($popupLoginData)): ?>
+    <div class="container" style="margin-top: 20px;">
+      <div class="alert alert-info" style="border-radius: 16px;">
+        <strong>Žiadosť o stav opravy odoslaná.</strong>
+        <div>Kontakt: <?php echo View::e($popupLoginData['kontakt']); ?></div>
+        <div>Kód zákazky: <?php echo View::e($popupLoginData['kod']); ?></div>
+        <div>Zapamätať údaje: <?php echo View::e($popupLoginData['remember']); ?></div>
+      </div>
+    </div>
+  <?php endif; ?>
+
+  <?php if (!empty($popupRegisterData)): ?>
+    <div class="container" style="margin-top: 20px;">
+      <div class="alert alert-info" style="border-radius: 16px;">
+        <strong>Nová objednávka z popup formulára odoslaná.</strong>
+        <div>Meno: <?php echo View::e($popupRegisterData['meno']); ?></div>
+        <div>Kontakt: <?php echo View::e($popupRegisterData['kontakt']); ?></div>
+        <div>Zariadenie: <?php echo View::e($popupRegisterData['zariadenie']); ?></div>
+        <div>Chcem info o stave opravy: <?php echo View::e($popupRegisterData['updates']); ?></div>
+      </div>
+    </div>
+  <?php endif; ?>
+
   <div id="modal" class="popupContainer" style="display:none;">
     <div class="popupHeader">
-                <span class="header_title">Prihlásenie</span>
-        <span class="modal_close"><i class="fa fa-times"></i></span>
+                <span class="header_title">Rýchly kontakt</span>
+    <span class="modal_close" aria-label="Zavriet">&times;</span>
     </div>
 
     <section class="popupBody">
-        <!-- Prihlásenie cez sociálne siete -->
+        
         <div class="social_login">
             <div class="">
                 <a href="#" class="social_box fb">
-                    <span class="icon"><i class="fab fa-facebook"></i></span>
-                    <span class="icon_title">Prepojiť s Facebookom</span>
+              <span class="icon" aria-hidden="true">&#9742;</span>
+              <span class="icon_title">Zavolajte nám: +421 911 222 333</span>
 
                 </a>
 
                 <a href="#" class="social_box google">
-                    <span class="icon"><i class="fab fa-google-plus"></i></span>
-                    <span class="icon_title">Prepojiť s Googlom</span>
+              <span class="icon" aria-hidden="true">&#9993;</span>
+              <span class="icon_title">Napíšte nám: servis@servismobilov.sk</span>
                 </a>
             </div>
 
             <div class="centeredText">
-                <span>Alebo použite svoju e-mailovú adresu</span>
+            <span>Alebo vyplňte formulár objednávky servisu</span>
             </div>
 
             <div class="action_btns">
-                <div class="one_half"><a href="#" id="login_form" class="btn">Prihlásiť sa</a></div>
-                <div class="one_half last"><a href="#" id="register_form" class="btn">Registrovať sa</a></div>
+            <div class="one_half"><a href="#" id="login_form" class="btn">Mám zariadenie v servise</a></div>
+            <div class="one_half last"><a href="#" id="register_form" class="btn">Nová objednávka opravy</a></div>
             </div>
         </div>
 
-        <!-- Prihlasovací formulár s používateľským menom a heslom -->
+        
         <div class="user_login">
-            <form>
-                <label>E-mail / používateľské meno</label>
-                <input type="text" />
+          <form action="" method="POST">
+          <label for="login_contact">E-mail / telefón</label>
+            <input id="login_contact" type="text" name="login_contact" required />
                 <br />
 
-                <label>Heslo</label>
-                <input type="password" />
+          <label for="login_code">Kód zákazky</label>
+          <input id="login_code" type="text" name="login_code" required />
                 <br />
 
                 <div class="checkbox">
-                    <input id="remember" type="checkbox" />
-                    <label for="remember">Zapamätať si ma na tomto počítači</label>
+              <input id="remember" type="checkbox" name="remember" />
+              <label for="remember">Súhlasím so spracovaním údajov na účely kontaktovania</label>
                 </div>
 
                 <div class="action_btns">
-                    <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Späť</a></div>
-                    <div class="one_half last"><a href="#" class="btn btn_red">Prihlásiť sa</a></div>
+                  <div class="one_half"><a href="#" class="btn back_btn">&larr; Späť</a></div>
+            <div class="one_half last"><button type="submit" name="popup_login_submit" class="btn btn_red">Odoslať dopyt</button></div>
                 </div>
             </form>
 
-            <a href="#" class="forgot_password">Zabudli ste heslo?</a>
+          <a href="#" class="forgot_password">Nemáte kód zákazky? Kontaktujte nás telefonicky.</a>
         </div>
 
-        <!-- Registračný formulár -->
+        
         <div class="user_register">
-            <form>
-                <label>Celé meno</label>
-                <input type="text" />
+          <form action="" method="POST">
+          <label for="register_name">Meno a priezvisko</label>
+            <input id="register_name" type="text" name="register_name" required />
                 <br />
 
-                <label>E-mailová adresa</label>
-                <input type="email" />
+          <label for="register_contact">E-mailová adresa alebo telefón</label>
+            <input id="register_contact" type="text" name="register_contact" required />
                 <br />
 
-                <label>Heslo</label>
-                <input type="password" />
+          <label for="register_device">Zariadenie a popis poruchy</label>
+          <input id="register_device" type="text" name="register_device" required />
                 <br />
 
                 <div class="checkbox">
-                    <input id="send_updates" type="checkbox" />
-                    <label for="send_updates">Posielajte mi občasné e-mailové aktualizácie</label>
+              <input id="send_updates" type="checkbox" name="send_updates" />
+              <label for="send_updates">Chcem dostávať informácie o stave opravy</label>
                 </div>
 
                 <div class="action_btns">
-                    <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Späť</a></div>
-                    <div class="one_half last"><a href="#" class="btn btn_red">Registrovať sa</a></div>
+                  <div class="one_half"><a href="#" class="btn back_btn">&larr; Späť</a></div>
+            <div class="one_half last"><button type="submit" name="popup_register_submit" class="btn btn_red">Odoslať objednávku</button></div>
                 </div>
             </form>
         </div>
     </section>
 </div>
+
+  <div id="account_login_modal" class="popupContainer" style="display:none;">
+    <div class="popupHeader">
+      <span class="header_title">Prihlásenie</span>
+      <span class="modal_close" aria-label="Zavriet">&times;</span>
+    </div>
+
+    <section class="popupBody">
+      <div class="account_login_form">
+        <form action="<?php echo View::e($basePath); ?>podstranky/produkty.php" method="POST">
+          <label for="account_login_email">E-mail</label>
+          <input id="account_login_email" type="email" name="account_login_email" required />
+          <br />
+
+          <label for="account_login_password">Heslo</label>
+          <input id="account_login_password" type="password" name="account_login_password" required />
+          <br />
+
+          <a href="#" class="social_box google account-google-login">
+            <span class="icon" aria-hidden="true">G</span>
+            <span class="icon_title">Prihlásiť cez Google</span>
+          </a>
+
+          <div class="action_btns account-actions">
+            <div class="one_half"><button type="submit" name="account_login_submit" class="btn btn_red">Prihlásiť sa</button></div>
+            <div class="one_half last"><a href="#account_register_modal" id="switch_to_account_register" class="btn">Registrovať sa</a></div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <div id="account_register_modal" class="popupContainer" style="display:none;">
+    <div class="popupHeader">
+      <span class="header_title">Registrácia</span>
+      <span class="modal_close" aria-label="Zavriet">&times;</span>
+    </div>
+
+    <section class="popupBody">
+      <div class="account_register_form">
+        <form action="<?php echo View::e($basePath); ?>podstranky/produkty.php" method="POST">
+          <label for="account_register_name">Meno</label>
+          <input id="account_register_name" type="text" name="account_register_name" required />
+          <br />
+
+          <label for="account_register_phone">Telefónne číslo</label>
+          <input id="account_register_phone" type="text" name="account_register_phone" required />
+          <br />
+
+          <label for="account_register_email">E-mail</label>
+          <input id="account_register_email" type="email" name="account_register_email" required />
+          <br />
+
+          <label for="account_register_password">Heslo</label>
+          <input id="account_register_password" type="password" name="account_register_password" required />
+          <br />
+
+          <div class="action_btns account-actions">
+            <button type="submit" name="account_register_submit" class="btn btn_red account-submit">Registrovať sa</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
